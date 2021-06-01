@@ -1,0 +1,26 @@
+
+
+Navigation bar 
+    - hover drop down
+    - add link navigation 
+    - (sidebar nav responsiveness)
+            // hide redundant information 
+            // add on scroll listeners 
+                    * on-scroll close side nav 
+                    * on-scroll up drop navigation bar  
+
+
+Product landing page 
+    - support for different Configurations
+        -config item shown and clickable i.e.[ https://www.spacex.com/vehicles/falcon-9/ ]
+    - Update renders 
+    - More info
+        - Quote
+        - Brochure
+        - Drawings ( levels of grading/packing ) 
+
+            Form questionnaire 
+                - to find machine type for client  -- quote for machines
+
+   Custom drawing 
+    - form input information -> Recommended configuration  

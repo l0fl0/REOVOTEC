@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
+
+/* Landing page Layout */
+main {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr)
+}
+ 
+#slideshow {
+    grid-column: 1 / span 8; 
+}
+
+#packer {
+    grid-column: 1 / span 4; 
+}
+
+#grader {
+    grid-column: 5 / span 4; 
+}
+
+#about {
+    grid-column: 1 / span 8;
+}
+
+
+/* slideshow */
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1450px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.caption {
+  color: #f2f2f2;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* The dots/bullets/indicators */
+/* .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+} 
+
+.active, .dot:hover {
+  background-color: #717171;
+} */
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* Packer and Grader section */
+.gradient-cover {
+    background: rgba(0,0,0,0.1);
+    background-image: linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,0),
+    rgba(0,0,0,.5));
+    height: 100%;
+    width: 100%;
+}
+section .content {
+    flex-direction: column;
+    margin:0 2rem;
+    display:flex;
+}
+
+section .content .title {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    text-align: center;
+    margin: 6rem 0;
+}
+
+section .content .title h1 {
+    margin-bottom: 1.5rem;
+}
+
+#packer {
+    background: url("/Resources/LandingPage/gp-one-repacker-candler.jpg") no-repeat center center /cover;
+}
+
+#grader {
+    background: url("/Resources/LandingPage/viewmax-blue.jpg") no-repeat center center /cover;
+}
+
+
+/* About */
+
+#about {
+    background-color: var(--primary-color);
+    margin-top: 4px;
+}
+
+#about .content {
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    text-align: center;
+}
+
+#about .content h1 {
+    margin: 1.5rem auto;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    width: 200px;
+    text-align: center;
+}
+
+#about .content .text-box{
+    margin: 1rem auto;
+    text-align: center;
+    font-size: 1.1rem;
+    max-width: 600px;
+}
+
+#about .content .contact {
+    display:flex;
+    flex-direction: column;
+    place-items: center;
+    font-size: 0.7rem;
+    margin: 3rem auto;
+
+} 
+#about .content .contact h4 {
+    margin-bottom: 5px;
+}
+
+#about .contact .location{
+    place-items: center;
+    background-image: linear-gradient( rgba(0,0,0,.3), rgba(0,0,0,.6), rgba(0,0,0,.3)),
+    url("/Resources/LandingPage/mexican-flag.svg.hi.png"); 
+    background-size: contain;
+    max-width: 150px;
+}
+
+#about .phone {
+    margin: 1rem 0 0;
+}
+
+/* @media (max-width: 800px) {
+    #about {
+        background-color: var(--primary-color)
+    }
+    
+    #about .content {
+        place-items: center;
+        text-align: center;
+    }
+    
+    #about .content h1 {
+        margin: 1.5rem 0;
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    #about .content .text-box{
+        text-align: center;
+        max-width: 600px;
+    }
+    
+    #about .content .contact {
+        display:flex;
+        flex-direction: column;
+        font-size: 0.7rem;
+        margin: 3rem 0 1rem;
+    } 
+    
+    #about .contact .location{
+        place-items: center;
+        background-image: linear-gradient( rgba(0,0,0,.3), rgba(0,0,0,.6), rgba(0,0,0,.3)),
+        url("/Resources/LandingPage/mexican-flag.svg.hi.png"); 
+        background-size: contain;
+        max-width: 150px;
+    }
+    
+    #about .phone {
+        margin: 1rem 0 0;
+    } 
+} */
