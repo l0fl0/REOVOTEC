@@ -14,8 +14,28 @@
 
   <body>
     <style>
-      section {
-        color: black;
+      main .vision {
+        background: url("/Resources/LandingPage/Packer-Side-Ovoselecta.png")
+          no-repeat center / cover;
+        height: 100vh;
+        display: flex;
+      }
+      .vision-description {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding: 1rem;
+        max-width: 500px;
+      }
+      .vision-description h3 {
+        font-size: 5rem;
+      }
+      .vision-description p {
+        line-height: 1.5;
+        font-size: 1.2rem;
       }
     </style>
     <div class="parent">
@@ -59,21 +79,13 @@
         </div>
       </header>
       <main>
-        <section>
-          <div>
-            <h3>
+        <section class="vision">
+          <div class="vision-description">
+            <h3>Vision</h3>
+            <p>
               Manufacture custom machinery with simple, reliable designs and
               with low operation / maintenance costs that give the best results
               and peace of mind to the client.
-            </h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-              perspiciatis maxime expedita dicta. Obcaecati dicta rerum nemo
-              ipsam ducimus quidem adipisci eius? Illo quia vero corrupti et
-              repudiandae dolor maiores beatae facere molestias delectus,
-              nostrum iure aspernatur, fugit ratione officiis velit cum
-              dignissimos omnis veritatis? Doloribus recusandae eaque magni
-              corporis?
             </p>
           </div>
         </section>
