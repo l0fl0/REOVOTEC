@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/about.css" />
+    <link rel="shortcut icon" href="/Resources/LandingPage/reovotec-logo.svg" />
     <link rel="stylesheet" href="/css/styles.css" />
     <script
       src="https://kit.fontawesome.com/aec62db3cb.js"
@@ -22,7 +22,7 @@
       }
       .vision-description {
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: 10%;
         display: flex;
         flex-direction: column;
@@ -30,8 +30,11 @@
         padding: 1rem;
         max-width: 500px;
       }
-      .vision-description h3 {
+      .vision-description h2 {
         font-size: 5rem;
+      }
+      .vision-description h3 {
+        font-size: 3rem;
       }
       .vision-description p {
         line-height: 1.5;
@@ -41,29 +44,57 @@
       /* History */
 
       .slideshow-container {
-        max-width: 1000px;
         position: relative;
+        display: flex;
         margin: auto;
+        height: 100vh;
       }
 
-      /* Next & previous buttons */
+      .mySlides {
+        height: 100%;
+        width: 100%;
+      }
+
+      /* The date/indicators */
+
+      .timeline-swiper {
+        position: absolute;
+        z-index: 3;
+        text-align: center;
+        width:100%;
+        font-size: 0;
+      } 
+
+      .year-button {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        padding: 2rem;
+        font-size: 1rem;
+        background-color: rgba(187, 187, 187, 0.192);
+        transition: background-color 0.6s ease;
+      }
+
+      .active,
+      .year-button:hover {
+        background-color: #717171;
+      }
       .prev,
       .next {
         cursor: pointer;
         position: absolute;
-        top: 50%;
+        bottom: 2%;
         width: auto;
         padding: 16px;
         margin-top: -22px;
         color: white;
         font-weight: bold;
-        font-size: 18px;
+        font-size: 2rem;
         transition: 0.6s ease;
         border-radius: 0 3px 3px 0;
         user-select: none;
       }
 
-      /* Position the "next button" to the right */
       .next {
         right: 0;
         border-radius: 3px 0 0 3px;
@@ -74,69 +105,12 @@
       .next:hover {
         background-color: rgba(0, 0, 0, 0.8);
       }
-
-      /* Caption text */
-      .text {
-        color: #f2f2f2;
-        font-size: 15px;
-        padding: 8px 12px;
-        position: absolute;
-        bottom: 8px;
-        width: 100%;
-        text-align: center;
-      }
-
-      /* Number text (1/3 etc) */
-      .numbertext {
-        color: #f2f2f2;
-        font-size: 12px;
-        padding: 8px 12px;
-        position: absolute;
-        top: 0;
-      }
-
-      /* The dots/bullets/indicators */
-      .dot {
-        cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-      }
-
-      .active,
-      .dot:hover {
-        background-color: #717171;
-      }
-
       /* Fading animation */
-      .fade {
-        -webkit-animation-name: fade;
-        -webkit-animation-duration: 1.5s;
-        animation-name: fade;
-        animation-duration: 1.5s;
+      .slide {
+        animation: 3s ease-in 1s infinite reverse both running slidein;
       }
 
-      @-webkit-keyframes fade {
-        from {
-          opacity: 0.4;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-
-      @keyframes fade {
-        from {
-          opacity: 0.4;
-        }
-        to {
-          opacity: 1;
-        }
-      }
+  
 
       /* On smaller screens, decrease text size */
       @media only screen and (max-width: 300px) {
@@ -198,32 +172,69 @@
             </p>
           </div>
         </section>
-        <section>
-          <div class="slideshow-container">
-            <div class="mySlides fade">
-              <img src="/Resources/LandingPage/Ovoselecta-10W-5-levels.jpg" style="width: 100%" />
-              <div class="text">Caption Text</div>
+        <section class="history">
+          <div class="timeline-swiper">
+            <div class="year-button" onclick="currentSlide(1)">
+              <span>2004</span>
             </div>
-
-            <div class="mySlides fade">
-              <img src="img_snow_wide.jpg" style="width: 100%" />
-              <div class="text">Caption Two</div>
+            <div class="year-button" onclick="currentSlide(2)">
+              <span>2007</span>
             </div>
-
-            <div class="mySlides fade">
-              <img src="img_mountains_wide.jpg" style="width: 100%" />
-              <div class="text">Caption Three</div>
+            <div class="year-button" onclick="currentSlide(3)">
+              <span>2008</span>
+            </div>
+            <div class="year-button" onclick="currentSlide(4)">
+              <span>2012</span>
+            </div>
+            <div class="year-button" onclick="currentSlide(5)">
+              <span>2015</span>
+            </div>
+            <div class="year-button" onclick="currentSlide(6)">
+              <span>2018</span>
             </div>
           </div>
-          <br />
+          <div class="slideshow-container">
+            <div class="mySlides slide">
+              <img src="/Resources/Factory/fact2.png" />
+              <div class="vision-description">
+                <h4>Febuary 2004</h4>
+                <h3>The Begining</h3>
+                <p>
+                  Intech LLC was founded in 2004 by Diamond Systems for its
+                  sales and customer service in Latin America, and to provide
+                  complementary equipment from other companies.
+                </p>
+              </div>
+            </div>
 
-          <div style="text-align: center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
+            <div class="mySlides slide">
+              <img src="/Resources/Factory/fact3.png" />
+              <div class="vision-description">
+                <h4>Febuary 2007</h4>
+                <h3>Acquisition</h3>
+                <p>
+                  In 2007 DiamondSystems was acquired by MobaNL. IntechLLC was not included in the MobaNL acquisition.
+                </p>
+              </div>
+            </div>
+
+            <div class="mySlides slide">
+              <img src="/Resources/Factory/fact4.png" />
+              <div class="vision-description">
+                <h4>Febuary 2008</h4>
+                <h3>Reovotec was Founded</h3>
+                <p>
+                  In 2008 IntechLLC was wholly acquired from TalonLLC (former owner of Diamond) by the current group.
+The group that owns IntechLLC founded ReovotecS.A in 2008. De C.V in Guadalajara, Mexico. Several Engineers and former DiamondSystems employees make up the new work team.
+The low cost of labor and operation in Mexico allows us to offer a fairly competitive price without compromising quality.
+                </p>
+              </div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
           </div>
         </section>
-        <section>WHAT WE OFFER</section>
+        <section class="what-we-are">WHAT WE OFFER</section>
       </main>
       <footer>
         <div class="content">
@@ -267,7 +278,7 @@
       function showSlides(n) {
         var i;
         var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
+        var dots = document.getElementsByClassName("year-button");
         if (n > slides.length) {
           slideIndex = 1;
         }
