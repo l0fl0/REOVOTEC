@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:500&display=swap");
 
 :root {
-  --primary-color: rgb(14, 110, 170);
+  --primary-color: #0e6eab;
   --secondary-color: rgba(0, 0, 0, 0.7);
   --box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.5);
 }
@@ -43,13 +43,12 @@ i {
 }
 
 h1 {
-  font: D-DIN-Bold, Arial, Verdana, sans-serif;
-  font-style: normal;
   text-transform: uppercase;
   color: #fff;
   font-weight: 600;
   font-size: 48px;
   line-height: 48px;
+  text-align: center;
 }
 
 hr {
@@ -64,8 +63,9 @@ hr {
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
+
 header {
-  width: 100vw;
+  width: 100%;
 }
 .navbar {
   position: sticky;
@@ -113,57 +113,46 @@ img {
 }
 
 /* Side navagation menue */
-#home {
-  top: 50%;
-  right: 0;
-  height: 0;
-  transform: translate(0, -50%);
-  width: 0;
-  position: fixed;
-  background: linear-gradient(
-    rgba(109, 107, 107, 0.7),
-    rgba(109, 107, 107, 0.5),
-    rgba(109, 107, 107, 0.7)
-  );
-  transition: 0.3s ease;
-  z-index: 1;
-}
-.sidenav {
+
+.sideNav {
   height: 100%;
   width: 0;
   display: flex;
   flex-direction: column;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   top: 0;
   right: 0;
   background-color: #fff;
   overflow-x: hidden;
   transition: 0.5s;
 }
-
-.sidenav a {
+.sideNav-focus {
+  transition: 0.3s ease;
+  z-index: 2;
+}
+.sideNav a {
   transition: 0.3s;
   padding: 16px 0 16px;
   font-size: 1rem;
   color: var(--primary-color);
 }
-.sidenav .links {
+.sideNav .links {
   margin: 0 3rem 0.5rem;
   text-align: right;
 }
-.sidenav .links a {
+.sideNav .links a {
   display: block;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.sidenav .closebtn {
+.sideNav .closebtn {
   margin: 0.5rem 3rem 0 auto;
   top: 2rem;
   right: 3.5rem;
   font-size: 1.8rem;
 }
-.sidenav .links .subsection {
+.sideNav .links .subsection {
   color: var(--secondary-color);
   font-weight: 600;
   border-bottom: none;
@@ -174,10 +163,10 @@ img {
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {
+  .sideNav {
     padding-top: 15px;
   }
-  .sidenav a {
+  .sideNav a {
     font-size: 18px;
   }
 }

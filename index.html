@@ -14,71 +14,75 @@
 
   <body>
     <div class="parent">
-      <header>
-        <nav class="navbar">
-          <a href="/index.html" class="logo">
-            <img
-              src="/Resources/LandingPage/Reovotec-logo-blue-white.svg"
-              alt="Reovotec logo"
-            />
-          </a>
-          <div class="navbar-link">
-            <ul>
-              <li><a href="/html/about.html" class="under">About</a></li>
-              <li><a href="" class="under">Products</a></li>
-              <li><a href="" class="under">Services</a></li>
-              <li><a href="" class="under">Updates</a></li>
+      <div id="mySideNav" class="sideNav">
+        <a
+          href="javascript:void(0)"
+          class="closebtn link"
+          onclick="closeNav()"
+          >&times;</a
+        >
+        <div class="links">
+          <a href="#" class="link"><span>About</span></a>
+          <a href="#" class="link"><span>Packers</span></a>
+          <a href="#" class="link"><span>Graders</span></a>
+          <a href="#" class="link"><span>Contact</span></a>
+        </div>
+      </div>
+      <div id="sideNav-focus" class="sideNav-focus">
+        <header>
+          <nav class="navbar">
+            <a href="/index.html" class="logo">
+              <img
+                src="/Resources/LandingPage/Reovotec-logo-blue-white.svg"
+                alt="Reovotec logo"
+              />
+            </a>
+            <div class="navbar-link">
+              <ul>
+                <li><a href="/html/about.html" class="under">About</a></li>
+                <li><a href="" class="under">Products</a></li>
+                <li><a href="" class="under">Services</a></li>
+                <li><a href="" class="under">Updates</a></li>
+              </ul>
+            </div>
+            <div class="hamburger">
+              <a href="#" class="toggle-button" onclick="openNav()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </a>
+            </div>
+          </nav>
+          
+        </header>
+        <main>
+          <section class="showcase">
+            <div class="logoXl">
+              <img
+                src="/Resources/LandingPage/reovotec-logo.svg"
+                alt="ReovoTec Logo Large"
+              />
+            </div>
+            <h1>Simple, Reliable, Advanced Systems</h1>
+          </section>
+        </main>
+        <footer>
+          <div class="content">
+            <span>REOVOTEC © 2020</span>
+            <ul class="links">
+              <li><a href="https://linkedin.com" class="link">Linkedin</a></li>
+              <li><a href="/index.html#packer" class="link">Products</a></li>
+              <li><a href="/events.html" class="link">Events</a></li>
+              <li>
+                <a href="http://intechllc.net/index.html" class="link"
+                  >Partners</a
+                >
+              </li>
             </ul>
           </div>
-          <div class="hamburger">
-            <a href="#" class="toggle-button" onclick="openNav()">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
-            </a>
-          </div>
-        </nav>
-        <div id="mySidenav" class="sidenav">
-          <a
-            href="javascript:void(0)"
-            class="closebtn link"
-            onclick="closeNav()"
-            >&times;</a
-          >
-          <div class="links">
-            <a href="#" class="link"><span>About</span></a>
-            <a href="#" class="link"><span>Packers</span></a>
-            <a href="#" class="link"><span>Graders</span></a>
-            <a href="#" class="link"><span>Contact</span></a>
-          </div>
-        </div>
-      </header>
-      <main>
-        <section class="showcase">
-          <div class="logoXl">
-            <img
-              src="/Resources/LandingPage/reovotec-logo.svg"
-              alt="ReovoTec Logo Large"
-            />
-          </div>
-          <h1>Simple, Reliable, Advanced Systems</h1>
-        </section>
-      </main>
-      <footer>
-        <div class="content">
-          <span>REOVOTEC © 2020</span>
-          <ul class="links">
-            <li><a href="https://linkedin.com" class="link">Linkedin</a></li>
-            <li><a href="/index.html#packer" class="link">Products</a></li>
-            <li><a href="/events.html" class="link">Events</a></li>
-            <li>
-              <a href="http://intechllc.net/index.html" class="link"
-                >Partners</a
-              >
-            </li>
-          </ul>
-        </div>
-      </footer>
+        </footer>
+      
+</div>
     </div>
     <script>
       function openNav() {
