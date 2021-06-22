@@ -71,11 +71,12 @@ img {
 }
 
 header {
+  top: 0;
   width: 100%;
   height: fit-content;
   position: fixed;
   background: #ffffff;
-  padding:0 2rem;
+  padding: 0 2rem;
 }
 
 .navbar {

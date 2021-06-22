@@ -1,6 +1,3 @@
-// Navagation Dropdown menue
-
-// Navagation toggel menue
 // Sidebar Navagation menue
 
 const sideNavagation = document.getElementById("mySideNav");
