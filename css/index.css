@@ -14,7 +14,6 @@ h1 {
   width: 400px;
 }
 
-
 /* Company Vision */
 
 .vision {
@@ -66,7 +65,7 @@ h1 {
 
 .timeline-swiper {
   position: absolute;
-  z-index: 2;
+  z-index: 1;
   text-align: center;
   width: 100%;
   font-size: 0;
