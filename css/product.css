@@ -1,6 +1,10 @@
 /* layout */
-.container {
-  max-width: 2000px;
+main{
+  display: flex;
+  flex-direction: column;
+  margin: auto; 
+  place-items: center;
+  max-width: 1300px;
 }
 main section {
   margin-bottom: 1rem;
@@ -8,18 +12,22 @@ main section {
 
 /* showcase / video */
 .section-a {
-  background-color: aquamarine;
+  margin-top: 2rem;
   display: flex;
+  height: 60vh;
 }
 
 .section-a .heading {
-  height: 70vh;
+  position: relative;
   width: 100%;
   display: flex;
   align-items: left;
 }
 
 .section-a .title {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   margin: auto 0 auto 2rem;
 }
 
