@@ -68,15 +68,19 @@ img {
   display: grid;
   grid-template-rows: auto 1fr auto;
   overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+  height:100%;
 }
 
 header {
   top: 0;
   width: 100%;
-  height: fit-content;
+  height: 66px;
   position: fixed;
   background: #ffffff;
   padding: 0 2rem;
+  z-index: 2;
 }
 
 .navbar {
@@ -111,6 +115,7 @@ header {
   justify-content: space-between;
   width: 25px;
   height: 20px;
+  cursor: pointer;
 }
 
 .toggle-button .bar {
@@ -127,7 +132,7 @@ header {
   display: flex;
   flex-direction: column;
   position: fixed;
-  z-index: 3;
+  z-index: 4;
   top: 0;
   right: 0;
   background-color: #fff;
@@ -135,8 +140,19 @@ header {
   transition: 0.5s;
 }
 .sideNav-focus {
+  top: 49.99%;
+  right: 0;
+  height: 0;
+  transform: translate(0, -50%);
+  width: 0;
+  position: fixed;
+  background: linear-gradient(
+    rgba(109, 107, 107, 0.7),
+    rgba(109, 107, 107, 0.5),
+    rgba(109, 107, 107, 0.7)
+  );
   transition: 0.3s ease;
-  z-index: 2;
+  z-index: 3;
 }
 .sideNav a {
   transition: 0.3s;
@@ -177,13 +193,19 @@ header {
     font-size: 18px;
   }
 }
-
+main {
+  margin-top: 66px;
+  padding-bottom: 90px;
+}
 /* Footer */
 
 footer {
+  position: absolute;
+  bottom: 0;
   width: 100%;
   background-color: #ffffff;
   color: #999;
+  height: 90px;
 }
 footer .content {
   display: flex;
@@ -230,12 +252,14 @@ footer ul a {
 
 /* Utiities */
 .text {
-  line-height: 1.6;
+  line-height: 1.4;
+  font-size: 1rem;
 }
 
 .btn {
   position: relative;
-  display: block;
+  display: grid;
+  place-content: center;
   color: #fff;
   font-size: 0.8rem;
   font-family: Arial, Helvetica, sans-serif;
@@ -265,15 +289,14 @@ footer ul a {
 }
 
 .btn1:before {
-  top: 105%; /* 110% because @ 100% there was an shake of object in the animation */
-  left: 0; /* so i moved the shake out of view due to the hidden overflow*/
-  width: 100%;
+  top: 100%; 
+  width:101%;
   height: 0%;
   transform: translate(0, -100%);
 }
 
 .btn1:hover::before {
-  height: 110%;
+  height: 100%;
 }
 
 .btn0 {
