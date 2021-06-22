@@ -193,8 +193,11 @@ header {
     font-size: 18px;
   }
 }
+
+/* Main */
+
 main {
-  margin-top: 66px;
+  padding-top: 66px;
   padding-bottom: 90px;
 }
 /* Footer */
