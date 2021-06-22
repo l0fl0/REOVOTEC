@@ -22,7 +22,7 @@
           >&times;</a
         >
         <div class="links">
-          <a href="#" class="link"><span>About</span></a>
+          <a href="/index.html#vision" class="link"><span>About</span></a>
           <a href="#" class="link"><span>Packers</span></a>
           <a href="#" class="link"><span>Graders</span></a>
           <a href="#" class="link"><span>Contact</span></a>
@@ -39,7 +39,10 @@
             </a>
             <div class="navbar-link">
               <ul>
-                <li><a href="/html/about.html" class="under">About</a></li>
+                <li>
+          <a href="/index.html#vision" class="link">About</a>
+
+                </li>
                 <li><a href="" class="under">Products</a></li>
                 <li><a href="" class="under">Services</a></li>
                 <li><a href="" class="under">Updates</a></li>
@@ -65,6 +68,85 @@
             </div>
             <h1>Simple, Reliable, Advanced Systems</h1>
           </section>
+          <section id="vision" class="vision">
+            <img src="/Resources/LandingPage/Packer-Side-Ovoselecta.png" 
+            alt="Packer Side Ovoselecta">
+            <div class="vision-description">
+              <h2>Vision</h2>
+              <p>
+                Manufacture custom machinery with simple, reliable designs and
+                with low operation / maintenance costs that give the best
+                results and peace of mind to the client.
+              </p>
+            </div>
+          </section>
+          <section class="history">
+            <div class="timeline-swiper">
+              <div class="year-button" onclick="currentSlide(1)">
+                <span>2004</span>
+              </div>
+              <div class="year-button" onclick="currentSlide(2)">
+                <span>2007</span>
+              </div>
+              <div class="year-button" onclick="currentSlide(3)">
+                <span>2008</span>
+              </div>
+              <div class="year-button" onclick="currentSlide(4)">
+                <span>2012</span>
+              </div>
+              <div class="year-button" onclick="currentSlide(5)">
+                <span>2015</span>
+              </div>
+              <div class="year-button" onclick="currentSlide(6)">
+                <span>2018</span>
+              </div>
+            </div>
+            <div class="slideshow-container">
+              <div class="mySlides " >
+                <img src="/Resources/Factory/fact2.png" />
+                <div class="vision-description">
+                  <h4>Febuary 2004</h4>
+                  <h3>The Begining</h3>
+                  <p>
+                    Intech LLC was founded in 2004 by Diamond Systems for its
+                    sales and customer service in Latin America, and to provide
+                    complementary equipment from other companies.
+                  </p>
+                </div>
+              </div>
+              <div class="mySlides ">
+                <img src="/Resources/Factory/fact3.png" />
+                <div class="vision-description">
+                  <h4>Febuary 2007</h4>
+                  <h3>Acquisition</h3>
+                  <p>
+                    In 2007 DiamondSystems was acquired by MobaNL. IntechLLC was
+                    not included in the MobaNL acquisition.
+                  </p>
+                </div>
+              </div>
+              <div class="mySlides ">
+                <img src="/Resources/Factory/fact4.png" />
+                <div class="vision-description">
+                  <h4>Febuary 2008</h4>
+                  <h3>Reovotec was Founded</h3>
+                  <p>
+                    In 2008 IntechLLC was wholly acquired from TalonLLC (former
+                    owner of Diamond) by the current group. The group that owns
+                    IntechLLC founded Reovotec S.A in 2008. In Guadalajara,
+                    Mexico. Several Engineers and former DiamondSystems
+                    employees make up the new team. The low cost of labor and
+                    operation in Mexico allows us to offer a fairly competitive
+                    price without compromising quality.
+                  </p>
+                </div>
+              </div>
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next"  onclick="plusSlides(1)">&#10095;</a>
+            </div>
+          </section>
+          <section class="what-we-are">WHAT WE OFFER</section>
+        </main>
         </main>
         <footer>
           <div class="content">
@@ -85,15 +167,7 @@
 </div>
     </div>
     <script>
-      function openNav() {
-        document.getElementById("mySidenav").style.width = "300px";
-        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-      }
 
-      function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-        document.body.style.backgroundColor = "#fff";
-      }
     </script>
     <script src="/js/index.js"></script>
   </body>

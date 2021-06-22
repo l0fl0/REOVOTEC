@@ -58,27 +58,33 @@ hr {
   background-color: #000;
 }
 
-/* Content latout header-main-footer */
-.parent {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-
-header {
-  width: 100%;
-}
-.navbar {
-  position: sticky;
-  margin: auto;
-  display: flex;
-  place-items: center;
-  max-width: 1300px;
-  /* box-shadow: var(--box-shadow); */
-}
 img {
   width: 100%;
   height: 100%;
 }
+
+/* Content latout header-main-footer */
+.parent {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  overflow: hidden;
+}
+
+header {
+  width: 100%;
+  height: fit-content;
+  position: fixed;
+  background: #ffffff;
+  padding:0 2rem;
+}
+
+.navbar {
+  margin: 0 auto;
+  display: flex;
+  place-items: center;
+  max-width: 1300px;
+}
+
 .logo {
   width: 90px;
   padding: 0.4rem;
@@ -94,7 +100,7 @@ img {
   color: var(--primary-color);
 }
 .hamburger {
-  margin: auto 1rem auto auto ;
+  margin-left: auto;
 }
 
 /* toggle btn */
