@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/Resources/LandingPage/reovotec-logo.svg" />
+
     <script
       src="https://kit.fontawesome.com/aec62db3cb.js"
       crossorigin="anonymous"
@@ -16,29 +18,26 @@
   <body>
     <div id="parent" class="parent">
       <div id="mySideNav" class="sideNav">
-      <a href="javascript:void(0)" class="closebtn link" onclick="closeNav()"
-        >&times;</a
-      >
-      <div class="links">
-        <!-- TODO: Attach links to a location -->
-        <a href="#" class="link"><span>Mission</span></a>
-        <a href="#" class="link"><span>FP One</span></a>
-        <a href="#" class="link"><span>GP One</span></a>
-        <a href="#" class="link"><span>Compacta D101</span></a>
-        <a href="#" class="link"><span>Ovoselecta</span></a>
-        <a href="#" class="link"><span>ViewMax</span></a>
-        <a href="#" class="link"><span>Updates</span></a>
-        <p class="subsection">Contact us</p>
-        <a href="#" class="link" style="text-transform: lowercase"
-          ><span>info@reovotec.com</span></a
+        <a href="javascript:void(0)" class="closebtn link" onclick="closeNav()"
+          >&times;</a
         >
-        <p class="subsection">Language</p>
-        <a href="#" class="link"
-          ><span><i class="fas fa-globe-americas"></i>Español</span></a
-        >
+        <div class="links">
+          <!-- TODO: Attach links to a location -->
+          <a href="#" class="link"><span>Mission</span></a>
+          <a href="#" class="link"><span>Packers</span></a>
+          <a href="#" class="link"><span>Graders</span></a>
+          <a href="#" class="link"><span>Updates</span></a>
+          <p class="subsection">Contact us</p>
+          <a href="#" class="link" style="text-transform: lowercase">
+            <span>info@reovotec.com</span>
+          </a>
+          <p class="subsection">Language</p>
+          <a href="#" class="link">
+            <span><i class="fas fa-globe-americas"></i>Español</span>
+          </a>
+        </div>
       </div>
-    </div>
-    <div id="sideNav-focus" class="sideNav-focus"></div>
+      <div id="sideNav-focus" class="sideNav-focus"></div>
       <header>
         <nav class="navbar">
           <a href="/index.html" class="logo">
@@ -71,30 +70,33 @@
             href="https://www.youtube.com/embed/5pmNPwTHW3M"
             class="lightBoxVideoLink heading"
           >
-            <img src="/Resources/packers/Automatic-Egg-Farm-Packer_FP1_Reovotec.png" alt=""/>
+            <img
+              src="/Resources/packers/Automatic-Egg-Farm-Packer_FP1_Reovotec.png"
+              alt=""
+            />
             <div class="title">
               <h1>Product</h1>
               <h3>Standard</h3>
             </div>
-            <div class="playbtn link1">
+            <div class="playbtn">
               <i class="far fa-play-circle"></i>
             </div>
           </a>
         </section>
         <section class="section-b">
-          <!-- TODO Create multiple sections for different configurations i.e. -->
-          <!--? Standard, Ovoselecta 10w, Ovoselecta 12w, Ovoselecta 6w -->
-          <div class="features">
-            <div class="content">
-              <div class="overview">
+          <div class="configuration configOn ">
+            <div class="overview">
+              <div class="overview-title">
                 <div>
                   <h4>Product</h4>
                   <h2>Overview</h2>
                 </div>
-                <span>></span>
+                <h2 class="next-slide" onclick="plusConfiguration(1)">
+                  <span style="color: #ffffff">Next</span> &#10095;
+                </h2>
               </div>
               <ul>
-                <li>
+                <li class="overview-description">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
                   natus debitis itaque. Molestiae provident eum unde sapiente
                   aliquid aliquam, voluptates rerum doloremque ullam accusantium
@@ -111,84 +113,114 @@
                 </li>
               </ul>
             </div>
+            <div class="showcase">
+              <!-- Product Blueprint image -->
+              <img
+                src="/Resources/packers/farm-packer-fp-one.jpg "
+                alt=""
+                class="no-margin"
+              />
+            </div>
           </div>
-          <div class="showcase">
-            <!-- Product Blueprint image -->
-            <img
-              src="/Resources/packers/farm-packer-fp-one.jpg "
-              alt=""
-              class="no-margin"
-            />
+          <div class="configuration configOn ">
+            <div class="overview">
+              <div class="overview-title">
+                <div>
+                  <h4>Product@</h4>
+                  <h2>Overview@</h2>
+                </div>
+                <h2 class="next-slide" onclick="plusConfiguration(1)">
+                  <span style="color: #ffffff">Next</span> &#10095;
+                </h2>
+              </div>
+              <ul>
+                <li class="overview-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                  natus debitis itaque. Molestiae provident eum unde sapiente
+                  aliquid aliquam, voluptates rerum doloremque ullam accusantium
+                  quia nisi dolorem tempora, doloribus culpa?
+                </li>
+                <li class="overview-stats">
+                  <span>Capacity</span><span>36,000 eggs/hr</span>
+                </li>
+                <li class="overview-stats">
+                  <span>Power</span><span>240V, 50/60HZ, 1PH, 5Amp</span>
+                </li>
+                <li class="overview-stats">
+                  <span>Body</span><span>Stainless steel</span>
+                </li>
+              </ul>
+            </div>
+            <div class="showcase">
+              <!-- Product Blueprint image -->
+              <img
+                src="/Resources/packers/farm-packer-fp-one.jpg "
+                alt=""
+                class="no-margin"
+              />
+            </div>
+          </div>
+          <div class="configuration configOn ">
+            <div class="overview">
+              <div class="overview-title">
+                <div>
+                  <h4>Product3</h4>
+                  <h2>Overview3</h2>
+                </div>
+                <h2 class="next-slide" onclick="plusConfiguration(1)">
+                  <span style="color: #ffffff">Next</span> &#10095;
+                </h2>
+              </div>
+              <ul>
+                <li class="overview-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                  natus debitis itaque. Molestiae provident eum unde sapiente
+                  aliquid aliquam, voluptates rerum doloremque ullam accusantium
+                  quia nisi dolorem tempora, doloribus culpa?
+                </li>
+                <li class="overview-stats">
+                  <span>Capacity</span><span>36,000 eggs/hr</span>
+                </li>
+                <li class="overview-stats">
+                  <span>Power</span><span>240V, 50/60HZ, 1PH, 5Amp</span>
+                </li>
+                <li class="overview-stats">
+                  <span>Body</span><span>Stainless steel</span>
+                </li>
+              </ul>
+            </div>
+            <div class="showcase">
+              <!-- Product Blueprint image -->
+              <img
+                src="/Resources/packers/farm-packer-fp-one.jpg "
+                alt=""
+                class="no-margin"
+              />
+            </div>
           </div>
         </section>
         <section class="section-c">
           <!-- Gallery of images View through lightbox -->
           <div class="gallery">
-            <a
-              href="/Resources/packers/farm-packer.jpg"
-              title="Caption here"
-              class="no-margin"
-            >
-              <img
-                src="/Resources/packers/farm-packer.jpg"
-                alt="Gallery image 1"
-                class="no-margin"
-              />
+            <!--LightBox Image -->
+            <a href="" title="Caption here" class="no-margin">
+              <!-- Gallery Image -->
+              <img src="" alt="Gallery image 1" class="no-margin" />
             </a>
-            <a
-              href="/Resources/packers/farm-packer.jpg"
-              title="Caption here"
-              class="no-margin"
-            >
-              <img
-                src="/Resources/packers/farm-packer.jpg"
-                alt="Gallery image 2"
-                class="no-margin"
-              />
+            <a href="" title="Caption here" class="no-margin">
+              <img src="" alt="Gallery image 2" class="no-margin" />
             </a>
-            <a
-              href="/Resources/packers/farm-packer.jpg"
-              title="Caption here"
-              class="no-margin"
-            >
-              <img
-                src="/Resources/packers/farm-packer.jpg"
-                alt="Gallery image 3"
-                class="no-margin"
-              />
+            <a href="" title="Caption here" class="no-margin">
+              <img src="" alt="Gallery image 3" class="no-margin" />
             </a>
-            <a
-              href="/Resources/packers/farm-packer.jpg"
-              title="Caption here"
-              class="no-margin"
-            >
-              <img
-                src="/Resources/packers/farm-packer.jpg"
-                alt="Gallery image 4"
-                class="no-margin"
-              />
+            <a href="" title="Caption here" class="no-margin">
+              <img src="" alt="Gallery image 4" class="no-margin" />
             </a>
-            <a
-              href="/Resources/packers/farm-packer.jpg"
-              title="Caption here"
-              class="no-margin"
-            >
-              <img
-                src="/Resources/packers/farm-packer.jpg"
-                alt="Gallery image 5"
-                class="no-margin"
-              />
+            <a href="" title="Caption here" class="no-margin">
+              <img src="" alt="Gallery image 5" class="no-margin" />
             </a>
-            <a
-              href="/Resources/packers/farm-packer.jpg"
-              title="Caption here"
-              class="no-margin"
-            >
-              <img
-                src="/Resources/packers/farm-packer.jpg"
-                alt="Gallery image 6"
-                class="no-margin"
-              />
+            <a href="" title="Caption here" class="no-margin">
+              <img src="" alt="Gallery image 6" class="no-margin" />
             </a>
           </div>
         </section>
@@ -231,6 +263,38 @@
       // simple lightbox
       new SimpleLightbox({ elements: ".gallery a" });
       new SimpleLightbox({ elements: ".lightBoxVideoLink" });
+
+     
+      // Product Configuration selector
+      var configurationIndex = 1;
+      changeConfiguration(configurationIndex);
+
+      function plusConfiguration(n) {
+        changeConfiguration((configurationIndex += n));
+      }
+
+      function changeConfiguration(n) {
+        let i;
+        var configurationArray =
+          document.getElementsByClassName("configuration");
+        console.log(configurationArray);
+        if (n > configurationArray.length) {
+          configurationIndex = 1;
+        }
+        if (n < 1) {
+          configurationIndex = configurationArray.length;
+        }
+        for (i = 0; i < configurationArray.length; i++) {
+          configurationArray[i].className = configurationArray[
+            i
+          ].className.replace(" configOn", "");
+          // configurationArray[i].style.display = "none"
+        }
+        // configurationArray[configurationIndex - 1].style.display = "grid"
+
+        configurationArray[configurationIndex - 1].className += " configOn";
+      }
+
     </script>
   </body>
 </html>
