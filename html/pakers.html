@@ -1,140 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/Resources/LandingPage/reovotec-logo.svg" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/aec62db3cb.js"
+      crossorigin="anonymous"
+    ></script>
     <style>
-        /* layout */
+      /* layout */
 
-        .parent {
-            display: grid;
-            grid-template-rows: auto 1fr auto;
-        }
+      main {  
+        display: grid;
+        place-items: center;
+      }
+      .container {
+       display: flex;
+       margin: 2rem 0;
+      }
+      .description {
+        max-height: 330px;
+        max-width: 330px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        justify-content: center;
+        color: var(--secondary-color);
+        padding: 1rem;
+        margin: 1rem auto;
+      }
 
+      .description .text {
+        margin: 1rem auto;
+      }
+
+      .description a {
+        margin: 0 auto;
+      }
+
+      .media {
+        text-align: center;
+        flex-direction: column;
+        display: flex;
+        max-height: 400px;
+        max-width: 800px;
+      }
+      .media img {
+        height: 100%;
+      }
+      .media .title {
+        color: var(--secondary-color);
+        height: 50px;
+      }
+
+      @media (max-width: 1000px) {
         .container {
-            display: grid;
-            grid-template-columns: minmax(200px, 30%) 1fr;
-            margin: 2rem;
+        flex-direction: column-reverse;
         }
-
-        .description {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            justify-content: center;
-            color: var(--secondary-color);
-        }
-
-        .description .text {
-            margin: 1rem auto;
-        }
-
-        .description a {
-            margin: 0 auto;
-        }
-
-        .media {
-            text-align: center;
-            margin-left: 0.5rem;
-        }
-
-        h1 {
-            color: var(--secondary-color);
-        }
+      }
     </style>
-    <title>Packers</title>
-</head>
+    <title>ReovoTec - Egg Packing</title>
+  </head>
+  <body>
+    <div id="parent" class="parent">
+      <div id="mySideNav" class="sideNav">
+        <a href="javascript:void(0)" class="closebtn link" onclick="closeNav()"
+          >&times;</a
+        >
+        <div class="links">
+          <a href="/index.html#vision" class="link"><span>About</span></a>
+          <a href="/html/pakers.html" class="link"><span>Packers</span></a>
+          <a href="#" class="link"><span>Graders</span></a>
+          <a href="#" class="link"><span>Contact</span></a>
+        </div>
+      </div>
+      <div id="sideNav-focus" class="sideNav-focus"></div>
+      <header>
+        <nav class="navbar">
+          <a href="/index.html" class="logo">
+            <img
+              src="/Resources/LandingPage/Reovotec-logo-blue-white.svg"
+              alt="Reovotec logo"
+            />
+          </a>
+          <div class="navbar-link">
+            <ul>
+              <li><a href="/index.html#vision" class="under">About</a></li>
+              <li><a href="" class="under">Products</a></li>
+              <li><a href="" class="under">Services</a></li>
+              <li><a href="" class="under">Updates</a></li>
+            </ul>
+          </div>
+          <div class="hamburger">
+            <a href="#" class="toggle-button" onclick="openNav()">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </a>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <section id="section-fpOne">
+          <div class="container">
+            <div class="description">
+              <img src="/Resources/packers/fp-one-logo.jpg" alt="" />
+              <p class="text">
+                Packer to be installed as an egg packer connected to a cross
+                conveyor from layer houses.
+              </p>
+              <a href="/html/products/fpOne.html" class="btn btn1 btn0"
+                ><span>More Info</span></a
+              >
+            </div>
+            <div class="media">
+              <img src="/Resources/packers/farm-packer-fp-one.jpg" alt="" />
+              <div class="title">
+                <h2>Farm Packer One</h2>
+              </div>
+            </div>
+          </div>
+        <hr/>
 
-<body>
-    <div class="parent">
-        <header>
-            <nav class="navbar">
-                <div class="logo">
-                    <a href="/index.html" class="no-margin">
-                        <img src="/Resources/LandingPage/Reovotec-logo-blue-white.svg" alt="Reovotec logo"
-                            class="no-margin">
-                    </a>
-                </div>
-                <div class="navbar-link">
-                    <ul>
-                        <li><a href="/index.html#about" class="under">About</a></li>
-                        <li><a href="/index.html#packer" class="under">Products</a></li>
-                    </ul>
-                </div>
-                <div class="hamburger">
-                    <a href="#" class="toggle-button" onclick="openNav()">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </a>
-                </div>
-            </nav>
-            <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn link" onclick="closeNav()">&times;</a>
-                <div class="links">
-                    <a href="#" class="link"><span>About</span></a>
-                    <a href="#" class="link"><span>Packers</span></a>
-                    <a href="#" class="link"><span>Graders</span></a>
-                    <a href="#" class="link"><span>Contact</span></a>
-                </div>
+        </section>
+       <section id="section-gpOne">
+          <div class="container">
+            <div class="description">
+              <img src="/Resources/packers/gp-one-logo.jpg" alt="" />
+              <p class="text">
+                Packer to be installed as a grader packer or as a stand alone
+                re-packer.
+              </p>
+              <a href="/html/products/gpOne.html" class="btn btn1 btn0"
+                ><span>More Info</span></a
+              >
             </div>
-        </header>
-        <main>
-            <section id="section-a">
-                <div class="container">
-                    <div class="description">
-                        <img src="/Resources/packers/fp-one-logo.jpg" style="width: 100%;" alt="">
-                        <p class="text">Packer to be installed as an egg packer connected to a cross conveyor from layer
-                            houses.</p>
-                        <a href="/products/fpOne.html" class="btn btn1 btn0"><span>More Info</span></a>
-                    </div>
-                    <div class="media">
-                        <h1>Farm Packer One</h1>
-                        <img src="/Resources/packers/farm-packer-fp-one.jpg" style="width: 100%; margin:1rem;" alt="">
-                    </div>
-                </div>
-            </section>
-            <hr>
-            <section id="section-b">
-                <div class="container">
-                    <div class="description">
-                        <img src="/Resources/packers/gp-one-logo.jpg" style="width: 100%;" alt="">
-                        <p class="text"> Packer to be installed as a grader packer or as a stand alone re-packer.</p>
-                        <a href="" class="btn btn1 btn0"><span>More Info</span></a>
-                    </div>
-                    <div class="media">
-                        <h1>Grader Packer One</h1>
-                        <h1>"Re-packer"</h1>
-                        <img src="/Resources/packers/grader-packer-gp-one.jpg" style="width: 100%; margin:1rem;" alt="">
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <div class="content">
-                <span>REOVOTEC © 2020</span>
-                <ul class="links">
-                    <li><a href="https://linkedin.com" class="link">Linkedin</a></li>
-                    <li><a href="/index.html#packer" class="link">Products</a></li>
-                    <li><a href="/events.html" class="link">Events</a></li>
-                    <li><a href="http://intechllc.net/index.html" class="link">Partners</a></li>
-                </ul>
+            <div class="media">
+              <img src="/Resources/packers/grader-packer-gp-one.jpg" alt="" />
+              <div class="title">
+                <h2>Grader Packer One</h2>
+                <h3>"Re-packer"</h3>
+              </div>
             </div>
-        </footer>
+          </div>
+        </section> 
+     </main>
+      <footer>
+        <div class="content">
+          <span>REOVOTEC © 2020</span>
+          <ul class="links">
+            <li><a href="https://linkedin.com" class="link">Linkedin</a></li>
+            <li><a href="/index.html#packer" class="link">Products</a></li>
+            <li><a href="/events.html" class="link">Events</a></li>
+            <li>
+              <a href="http://intechllc.net/index.html" class="link"
+                >Partners</a
+              >
+            </li>
+          </ul>
+        </div>
+      </footer>
     </div>
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "300px";
-            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-        }
-
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-            document.body.style.backgroundColor = "#fff";
-        }
-    </script>
-</body>
-
+    <script></script>
+    <script src="/js/index.js"></script>
+  </body>
 </html>

@@ -1,32 +1,50 @@
+// Sidebar Navagation menue
 
-// Main page slide show
-var slideIndex = 0;
-showSlides();
+const sideNavagation = document.getElementById("mySideNav");
+const sideNavagationOverlay = document.getElementById("sideNav-focus");
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 9000); // Change image every 2 seconds
+function openNav() {
+  sideNavagation.style.width = "300px";
+  sideNavagationOverlay.style.height = "100%";
+  sideNavagationOverlay.style.width = "100%";
+}
+function closeNav() {
+  sideNavagation.style.width = "0";
+  sideNavagationOverlay.style.height = "0";
+  sideNavagationOverlay.style.width = "0";
 }
 
-// Navagation Dropdown menue
+//   History
+let slideIndex = 1;
+
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+  let i;
+  const slides = document.getElementsByClassName("mySlides");
+  const year = document.getElementsByClassName("year-button");
+  console.log(slides)
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.width = "0";
+    year[i].className = year[i].className.replace(" active", "");
+
+  }
+  slides[slideIndex - 1].style.width = "100%";
+  year[slideIndex - 1].className += " active";
+}
+
+showSlides(slideIndex);
 
 
-// Navagation toggel menue
-     // Sidebar Navagation menue
-     function openNav() {
-      document.getElementById("mySidenav").style.width = "400px";
-      document.getElementById("home").style.width = "100%";
-      document.getElementById("home").style.height = "100%";
-      }
-      function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-      document.getElementById("home").style.width = "0";
-      document.getElementById("home").style.height = "0";
-      }
