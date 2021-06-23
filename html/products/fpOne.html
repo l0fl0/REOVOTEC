@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/Resources/LandingPage/reovotec-logo.svg" />
+
     <script
       src="https://kit.fontawesome.com/aec62db3cb.js"
       crossorigin="anonymous"
@@ -12,7 +13,8 @@
     <link rel="stylesheet" href="/css/simpleLightbox.css" />
     <link rel="stylesheet" href="/css/styles.css" />
     <title>Farm Packer One</title>
-</head>
+  </head>
+
   <body>
     <div id="parent" class="parent">
       <div id="mySideNav" class="sideNav">
@@ -62,7 +64,7 @@
         </nav>
       </header>
       <main>
-        <!--! Video & Thumbnail -->
+        <!--TODO Video  -->
         <section class="section-a">
           <a
             href="https://www.youtube.com/embed/5pmNPwTHW3M"
@@ -72,7 +74,7 @@
               src="/Resources/packers/Automatic-Egg-Farm-Packer_FP1_Reovotec.png"
               alt=""
             />
-            <div class="title"> <!--! Title -->
+            <div class="title">
               <h1>Product</h1>
               <h3>Standard</h3>
             </div>
@@ -85,23 +87,15 @@
           <div class="configuration configOn ">
             <div class="overview">
               <div class="overview-title">
-                <div> <!--! Title -->
+                <div>
                   <h4>Product</h4>
                   <h2>Overview</h2>
                 </div>
-              <h2 class="previous-slide" onclick="plusConfiguration(-1)">
-                 &#10094; <span style="color: #ffffff">Prev</span>
-              </h2>
-              <h2 class="next-slide" onclick="plusConfiguration(1)">
-                <span style="color: #ffffff">Next</span> &#10095;
-              </h2>
-              </div>
-              <ul>
                 <h2 class="next-slide" onclick="plusConfiguration(1)">
                   <span style="color: #ffffff">Next</span> &#10095;
                 </h2>
               </div>
-              <ul> <!--! Description & stats -->
+              <ul>
                 <li class="overview-description">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
                   natus debitis itaque. Molestiae provident eum unde sapiente
@@ -118,34 +112,28 @@
                   <span>Body</span><span>Stainless steel</span>
                 </li>
               </ul>
+            </div>
             <div class="showcase">
-              <!--! Product Blueprint image -->
+              <!-- Product Blueprint image -->
               <img
                 src="/Resources/packers/farm-packer-fp-one.jpg "
                 alt=""
-              />  
+                class="no-margin"
+              />
             </div>
           </div>
           <div class="configuration configOn ">
             <div class="overview">
               <div class="overview-title">
-                <div> <!--! Title -->
-                  <h4>Product2</h4>
-                  <h2>Overview2</h2>
+                <div>
+                  <h4>Product@</h4>
+                  <h2>Overview@</h2>
                 </div>
-              <h2 class="previous-slide" onclick="plusConfiguration(-1)">
-                 &#10094; <span style="color: #ffffff">Prev</span>
-              </h2>
-              <h2 class="next-slide" onclick="plusConfiguration(1)">
-                <span style="color: #ffffff">Next</span> &#10095;
-              </h2>
-              </div>
-              <ul>
                 <h2 class="next-slide" onclick="plusConfiguration(1)">
                   <span style="color: #ffffff">Next</span> &#10095;
                 </h2>
               </div>
-              <ul> <!--! Description & stats -->
+              <ul>
                 <li class="overview-description">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
                   natus debitis itaque. Molestiae provident eum unde sapiente
@@ -162,34 +150,28 @@
                   <span>Body</span><span>Stainless steel</span>
                 </li>
               </ul>
+            </div>
             <div class="showcase">
-              <!--! Product Blueprint image -->
+              <!-- Product Blueprint image -->
               <img
                 src="/Resources/packers/farm-packer-fp-one.jpg "
                 alt=""
-              />  
+                class="no-margin"
+              />
             </div>
           </div>
           <div class="configuration configOn ">
             <div class="overview">
               <div class="overview-title">
-                <div> <!--! Title -->
+                <div>
                   <h4>Product3</h4>
                   <h2>Overview3</h2>
                 </div>
-              <h2 class="previous-slide" onclick="plusConfiguration(-1)">
-                 &#10094; <span style="color: #ffffff">Prev</span>
-              </h2>
-              <h2 class="next-slide" onclick="plusConfiguration(1)">
-                <span style="color: #ffffff">Next</span> &#10095;
-              </h2>
-              </div>
-              <ul>
                 <h2 class="next-slide" onclick="plusConfiguration(1)">
                   <span style="color: #ffffff">Next</span> &#10095;
                 </h2>
               </div>
-              <ul> <!--! Description & stats -->
+              <ul>
                 <li class="overview-description">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
                   natus debitis itaque. Molestiae provident eum unde sapiente
@@ -206,12 +188,14 @@
                   <span>Body</span><span>Stainless steel</span>
                 </li>
               </ul>
+            </div>
             <div class="showcase">
-              <!--! Product Blueprint image -->
+              <!-- Product Blueprint image -->
               <img
                 src="/Resources/packers/farm-packer-fp-one.jpg "
                 alt=""
-              />  
+                class="no-margin"
+              />
             </div>
           </div>
         </section>
@@ -273,7 +257,6 @@
         </div>
       </footer>
     </div>
-  </body>
     <script src="/js/simpleLightbox.js"></script>
     <script src="/js/index.js"></script>
     <script>
@@ -305,10 +288,7 @@
           configurationArray[i].className = configurationArray[
             i
           ].className.replace(" configOn", "");
-          // configurationArray[i].style.display = "none"
         }
-        // configurationArray[configurationIndex - 1].style.display = "grid"
-
         configurationArray[configurationIndex - 1].className += " configOn";
       }
 
