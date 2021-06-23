@@ -1,175 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="/Resources/LandingPage/reovotec-logo.svg" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="https://kit.fontawesome.com/aec62db3cb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/aec62db3cb.js"
+      crossorigin="anonymous"
+    ></script>
     <title>ReovoTec - Egg Packing and Grading</title>
-</head>
-
-<body>
+  </head>
+  <body>
     <div class="parent">
+      <div id="mySideNav" class="sideNav">
+        <a
+          href="javascript:void(0)"
+          class="closebtn link"
+          onclick="closeNav()"
+          >
+          &times;
+        </a>
+        <div class="links">
+          <a href="/index.html#vision" class="link"><span>About</span></a>
+          <a href="/html/pakers.html" class="link"><span>Packers</span></a>
+          <a href="#" class="link"><span>Graders</span></a>
+          <a href="#" class="link"><span>Contact</span></a>
+        </div>
+      </div>
+      <div id="sideNav-focus" class="sideNav-focus"></div>
         <header>
-            <nav class="navbar">
-                <!-- Update navbar to product landing page -->
-                <div class="logo">
-                    <a href="/index.html" class="no-margin">
-                        <img src="/Resources/LandingPage/Reovotec-logo-blue-white.svg" alt="Reovotec logo"
-                            class="no-margin">
-                    </a>
-                </div>
-                <div class="navbar-link">
-                    <ul>
-                        <li><a href="/index.html#about" class="under">About</a></li>
-                        <li><a href="/index.html#packer" class="under">Products</a></li>
-                    </ul>
-                </div>
-                <div class="hamburger">
-                    <a href="#" class="toggle-button" onclick="openNav()">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </a>
-                </div>
-            </nav>
-            <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn link" onclick="closeNav()">&times;</a>
-                <div class="links">
-                    <a href="#" class="link"><span>About</span></a>
-                    <a href="#" class="link"><span>Packers</span></a>
-                    <a href="#" class="link"><span>Graders</span></a>
-                    <a href="#" class="link"><span>Contact</span></a>
-                </div>
+          <nav class="navbar">
+            <a href="/index.html" class="logo">
+              <img
+                src="/Resources/LandingPage/Reovotec-logo-blue-white.svg"
+                alt="Reovotec logo"
+              />
+            </a>
+            <div class="navbar-link">
+              <ul>
+                <li><a href="/index.html#vision" class="link">About</a></li>
+                <li><a href="" class="under">Products</a></li>
+                <li><a href="" class="under">Services</a></li>
+                <li><a href="" class="under">Updates</a></li>
+              </ul>
             </div>
+            <div class="hamburger">
+              <div class="toggle-button" onclick="openNav()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </div>
+            </div>
+          </nav>
         </header>
         <main>
-            <section id="slideshow">
-                <div class="slideshow-container">
-                    <div class="mySlides fade">
-                        <img src="/Resources/LandingPage/Packer-Side-Ovoselecta.png" style="width:100%"
-                            class="slideshow-img" alt="">
-                        <div class="caption">Packer side Ovoselecta</div>
-                    </div>
-                    <!-- <div class="mySlides fade">
-                        <img src="/Resources/LandingPage/Ovoselecta-10W-5-levels.jpg" style="width:100%" 
-                        class="slideshow-img" alt="">
-                        <div class="caption">Ovoselecta 10W 5 levels</div>
-                      </div> -->
-                    <div class="mySlides fade">
-                        <img src="/Resources/LandingPage/Ovoscopio-Touch-Screen.png" style="width:100%"
-                            class="slideshow-img" alt="">
-                        <div class="caption">Ovoscopio Touch Screen</div>
-                    </div>
-                    <div class="mySlides fade">
-                        <img src="/Resources/LandingPage/BAckside-Ovoselecta.png" style="width:100%"
-                            class="slideshow-img" alt="">
-                        <div class="caption">Backside Ovoselecta</div>
-                    </div>
-                    <div>
-                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                    </div>
-                    <!-- <div style="text-align:center">
-                        <span class="dot" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
-                    </div> -->
-            </section>
-            <section id="packer">
-                <div class="gradient-cover">
-                    <div class="content">
-                        <div class="title">
-                            <h1>Egg Packers</h1>
-                            <a href="/html/pakers.html" class="btn btn1"><span class="raise">learn more</span></a>
-                        </div>
-                    </div>
+          <section class="showcase">
+            <div class="logoXl">
+              <img
+                src="/Resources/LandingPage/reovotec-logo.svg"
+                alt="ReovoTec Logo Large"
+              />
+            </div>
+            <h1>Simple, Reliable, Advanced Systems</h1>
+          </section>
+          <section id="vision" class="vision">
+            <img src="/Resources/LandingPage/Packer-Side-Ovoselecta.png" 
+            alt="Packer Side Ovoselecta">
+            <div class="vision-description">
+              <h2>Vision</h2>
+              <p>
+                Manufacture custom machinery with simple, reliable designs and
+                with low operation / maintenance costs that give the best
+                results and peace of mind to the client.
+              </p>
+            </div>
+          </section>
+          <section class="history">
+            <div class="timeline-swiper">
+              <div class="year-button" onclick="currentSlide(1)">
+                <span>2004</span>
+              </div>
+              <div class="year-button" onclick="currentSlide(2)">
+                <span>2007</span>
+              </div>
+              <div class="year-button" onclick="currentSlide(3)">
+                <span>2008</span>
+              </div>
+              <div class="year-button" onclick="currentSlide(4)">
+                <span>2012</span>
+              </div>
+              <div class="year-button" onclick="currentSlide(5)">
+                <span>2015</span>
+              </div>
+              <div class="year-button" onclick="currentSlide(6)">
+                <span>2018</span>
+              </div>
+            </div>
+            <div class="slideshow-container">
+              <div class="mySlides " >
+                <img src="/Resources/Factory/fact2.png" />
+                <div class="vision-description">
+                  <h4>Febuary 2004</h4>
+                  <h3>The Begining</h3>
+                  <p>
+                    Intech LLC was founded in 2004 by Diamond Systems for its
+                    sales and customer service in Latin America, and to provide
+                    complementary equipment from other companies.
+                  </p>
                 </div>
-            </section>
-            <section id="grader">
-                <div class="gradient-cover">
-                    <div class="content">
-                        <div class="title">
-                            <h1>Egg Graders</h1>
-                            <a href="/html/graders.html" class='btn btn1'><span class="raise">learn more</span></a>
-                        </div>
-                    </div>
+              </div>
+              <div class="mySlides ">
+                <img src="/Resources/Factory/fact3.png" />
+                <div class="vision-description">
+                  <h4>Febuary 2007</h4>
+                  <h3>Acquisition</h3>
+                  <p>
+                    In 2007 DiamondSystems was acquired by MobaNL. IntechLLC was
+                    not included in the MobaNL acquisition.
+                  </p>
                 </div>
-            </section>
-            <section id="about">
-                <div class="cover">
-                    <div class="content">
-                        <h1>ABOUT REOVOTEC</h1>
-                        <div class="contact">
-                            <h4> Where we are</h4>
-                            <div class="location">
-                                <a href="https://www.google.com/maps/place/Reovotec/
-                                @20.7378796,-103.4226039,691m/data=!3m2!1e3!4b1!4m5!3m4!1s0x8428af6eeedbd7d5:0xb407958432b9dcab!8m2!3d20.7378746!4d-103.4204152"
-                                    class="under">
-                                    <span class="text"><i class="fas fa-map-marker-alt"></i>
-                                        Reovotec, Circuito San Eduardo 110,
-                                        Bodega de San Juan de Ocotan
-                                        Zapopan, Jalisco 45019
-                                        Mexico
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="phone">
-                                <a href="" class="under link">
-                                    <i class="fas fa-phone-alt"></i>
-                                    <span>+1 (954)-384-4335</span>
-                                </a>
-                            </div>
-                            <a href="mailto:info@reovotec.com" class="btn btn1">Contact Us</a>
-                        </div>
-                        <p class="text-box">
-                            <span class="text one">
-                                Two words Packaging and Grading.<br> We specialize in designing systems,
-                                supplying, and servicing our customers using the most advanced technology available on
-                                the shell egg market.<br>
-                            </span>
-                            <span class="text two">
-                                A quality built grader or packer needs to be efficient, reliable, and backed by
-                                knowledgeable friendly support.
-                                Our systems meet these standards at a price that's affordable.<br>
-                            </span>
-                            <span class="text three">
-                                Whether your experience lies within industrial grading and packing or farm packing our
-                                staff is here to serve you.
-                                We value our customers and always strive to improve industry standards as well as our
-                                client relations.
-                            </span>
-                        </p>
-                    </div>
+              </div>
+              <div class="mySlides ">
+                <img src="/Resources/Factory/fact4.png" />
+                <div class="vision-description">
+                  <h4>Febuary 2008</h4>
+                  <h3>Reovotec was Founded</h3>
+                  <p>
+                    In 2008 IntechLLC was wholly acquired from TalonLLC (former
+                    owner of Diamond) by the current group. The group that owns
+                    IntechLLC founded Reovotec S.A in 2008. In Guadalajara,
+                    Mexico. Several Engineers and former DiamondSystems
+                    employees make up the new team. The low cost of labor and
+                    operation in Mexico allows us to offer a fairly competitive
+                    price without compromising quality.
+                  </p>
                 </div>
-            </section>
+              </div>
+              <a class="previous-slide" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next-slide"  onclick="plusSlides(1)">&#10095;</a>
+            </div>
         </main>
         <footer>
-            <div class="content">
-                <span>REOVOTEC © 2020</span>
-                <ul class="links">
-                    <li><a href="https://linkedin.com" class="link">Linkedin</a></li>
-                    <li><a href="/index.html#packer" class="link">Products</a></li>
-                    <li><a href="/events.html" class="link">Events</a></li>
-                    <li><a href="http://intechllc.net/index.html" class="link">Partners</a></li>
-                </ul>
-            </div>
+          <div class="content">
+            <span>REOVOTEC © 2020</span>
+            <ul class="links">
+              <li><a href="https://linkedin.com" class="link">Linkedin</a></li>
+              <li><a href="/index.html#packer" class="link">Products</a></li>
+              <li><a href="/events.html" class="link">Events</a></li>
+              <li>
+                <a href="http://intechllc.net/index.html" class="link"
+                  >Partners</a
+                >
+              </li>
+            </ul>
+          </div>
         </footer>
     </div>
     <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "300px";
-            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-        }
 
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-            document.body.style.backgroundColor = "#fff";
-        }
     </script>
     <script src="/js/index.js"></script>
-</body>
-
+  </body>
 </html>

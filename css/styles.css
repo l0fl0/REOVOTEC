@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:500&display=swap");
 
 :root {
-  --primary-color: rgb(14, 110, 170);
+  --primary-color: #0e6eab;
   --secondary-color: rgba(0, 0, 0, 0.7);
   --box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.5);
 }
@@ -43,13 +43,12 @@ i {
 }
 
 h1 {
-  font: D-DIN-Bold, Arial, Verdana, sans-serif;
-  font-style: normal;
   text-transform: uppercase;
   color: #fff;
   font-weight: 600;
   font-size: 48px;
   line-height: 48px;
+  text-align: center;
 }
 
 hr {
@@ -59,31 +58,45 @@ hr {
   background-color: #000;
 }
 
-/* Content latout header-main-footer */
-.parent {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-header {
-  width: 100vw;
-}
-.navbar {
-  margin: auto;
-  display: flex;
-  place-items: center;
-  max-width: 1300px;
-  /* box-shadow: var(--box-shadow); */
-}
 img {
   width: 100%;
   height: 100%;
 }
+
+/* Content latout header-main-footer */
+.parent {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+  height: 100%;
+}
+
+header {
+  top: 0;
+  width: 100%;
+  height: 66px;
+  position: fixed;
+  background: #ffffff;
+  padding: 0 2rem;
+  z-index: 2;
+  box-shadow: 0 0 5px var(--secondary-color);
+}
+
+.navbar {
+  margin: 0 auto;
+  display: flex;
+  place-items: center;
+  max-width: 1300px;
+}
+
 .logo {
-  width: 130px;
-  padding: 0.5rem;
+  width: 90px;
+  padding: 0.4rem;
 }
 .navbar-link {
-  margin: 0 auto 0 10rem
+  margin: 0 auto 0 4rem;
 }
 .navbar-link ul {
   display: flex;
@@ -93,8 +106,7 @@ img {
   color: var(--primary-color);
 }
 .hamburger {
-    display: none;  /* temp till final implementation*/
-  margin: auto 0 auto auto ;
+  margin-left: auto;
 }
 
 /* toggle btn */
@@ -104,6 +116,7 @@ img {
   justify-content: space-between;
   width: 25px;
   height: 20px;
+  cursor: pointer;
 }
 
 .toggle-button .bar {
@@ -113,8 +126,22 @@ img {
 }
 
 /* Side navagation menue */
-#home {
-  top: 50%;
+
+.sideNav {
+  height: 100%;
+  width: 0;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.sideNav-focus {
+  top: 49.99%;
   right: 0;
   height: 0;
   transform: translate(0, -50%);
@@ -126,44 +153,30 @@ img {
     rgba(109, 107, 107, 0.7)
   );
   transition: 0.3s ease;
-  z-index: 1;
+  z-index: 3;
 }
-.sidenav {
-  height: 100%;
-  width: 0;
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  z-index: 2;
-  top: 0;
-  right: 0;
-  background-color: #fff;
-  overflow-x: hidden;
-  transition: 0.5s;
-}
-
-.sidenav a {
+.sideNav a {
   transition: 0.3s;
   padding: 16px 0 16px;
   font-size: 1rem;
   color: var(--primary-color);
 }
-.sidenav .links {
+.sideNav .links {
   margin: 0 3rem 0.5rem;
   text-align: right;
 }
-.sidenav .links a {
+.sideNav .links a {
   display: block;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.sidenav .closebtn {
+.sideNav .closebtn {
   margin: 0.5rem 3rem 0 auto;
   top: 2rem;
   right: 3.5rem;
   font-size: 1.8rem;
 }
-.sidenav .links .subsection {
+.sideNav .links .subsection {
   color: var(--secondary-color);
   font-weight: 600;
   border-bottom: none;
@@ -174,20 +187,29 @@ img {
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {
+  .sideNav {
     padding-top: 15px;
   }
-  .sidenav a {
+  .sideNav a {
     font-size: 18px;
   }
 }
 
+/* Main */
+
+main {
+  padding-top: 66px;
+  padding-bottom: 90px;
+}
 /* Footer */
 
 footer {
+  position: absolute;
+  bottom: 0;
   width: 100%;
   background-color: #ffffff;
   color: #999;
+  height: 90px;
 }
 footer .content {
   display: flex;
@@ -234,12 +256,14 @@ footer ul a {
 
 /* Utiities */
 .text {
-  line-height: 1.6;
+  line-height: 1.4;
+  font-size: 1rem;
 }
 
 .btn {
   position: relative;
-  display: block;
+  display: grid;
+  place-content: center;
   color: #fff;
   font-size: 0.8rem;
   font-family: Arial, Helvetica, sans-serif;
@@ -269,15 +293,14 @@ footer ul a {
 }
 
 .btn1:before {
-  top: 105%; /* 110% because @ 100% there was an shake of object in the animation */
-  left: 0; /* so i moved the shake out of view due to the hidden overflow*/
-  width: 100%;
+  top: 100%;
+  width: 101%;
   height: 0%;
   transform: translate(0, -100%);
 }
 
 .btn1:hover::before {
-  height: 110%;
+  height: 101%;
 }
 
 .btn0 {
@@ -305,4 +328,41 @@ footer ul a {
 .under:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+/* Slideshow controls */
+
+.previous-slide,
+.next-slide {
+  cursor: pointer;
+  position: absolute;
+  bottom: 2%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next-slide {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.previous-slide:hover,
+.next-slide:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .previous-slide,
+  .next-slide {
+    font-size: 11px;
+  }
 }
