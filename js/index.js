@@ -16,7 +16,6 @@ function closeNav() {
 
 //   History
 let slideIndex = 1;
-showSlides(slideIndex);
 
 function plusSlides(n) {
   showSlides((slideIndex += n));
@@ -27,21 +26,25 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
+  let i;
   const slides = document.getElementsByClassName("mySlides");
   const year = document.getElementsByClassName("year-button");
-  console.log(slides);
+  console.log(slides)
   if (n > slides.length) {
     slideIndex = 1;
   }
   if (n < 1) {
     slideIndex = slides.length;
   }
-  for (let i = 0; i < slides.length; i++) {
+  for (i = 0; i < slides.length; i++) {
     slides[i].style.width = "0";
-  }
-  for (let i = 0; i < year.length; i++) {
     year[i].className = year[i].className.replace(" active", "");
+
   }
   slides[slideIndex - 1].style.width = "100%";
   year[slideIndex - 1].className += " active";
 }
+
+showSlides(slideIndex);
+
+
