@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/Resources/LandingPage/reovotec-logo.svg" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/aec62db3cb.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>ReovoTec - Egg Packing & Grading</title>
+  </head>
+  <body>
+    <div id="parent" class="parent">
+      <div id="mySideNav" class="sideNav">
+        <a href="javascript:void(0)" class="closebtn link" onclick="closeNav()"
+          >&times;</a
+        >
+        <div class="links">
+          <!-- TODO: Attach links to a location -->
+          <a href="/index.html#vision" class="link"><span>Mission</span></a>
+          <a href="/html/pakers.html" class="link"><span>Packers</span></a>
+          <a href="/html/graders.html" class="link"><span>Graders</span></a>
+          <a href="/html/contact.html" class="link"><span>Contact</span></a>
+          <p class="subsection">Language</p>
+          <a href="#" class="link">
+            <span><i class="fas fa-globe-americas"></i>Español</span>
+          </a>
+        </div>
+      </div>
+      <div id="sideNav-focus" class="sideNav-focus"></div>
+      <header>
+        <nav class="navbar">
+          <a href="/index.html" class="logo">
+            <img
+              src="/Resources/LandingPage/Reovotec-logo-blue-white.svg"
+              alt="Reovotec logo"
+            />
+          </a>
+          <div class="navbar-link">
+            <ul>
+              <li><a href="/index.html#vision" class="under">Mission</a></li>
+              <li><a href="/html/products.html" class="under">Products</a></li>
+              <li>
+                <a href="http://intechllc.net/products.html" class="under"
+                  >Services</a
+                >
+              </li>
+              <li><a href="/html/updates.html" class="under">Updates</a></li>
+            </ul>
+          </div>
+          <div class="hamburger">
+            <a href="#" class="toggle-button" onclick="openNav()">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </a>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <h2>AUTOMATIC EGG PACKERS</h2>
+        <section class="packers">
+          <a href="/html/products/packers/fpOne.html" class="tile">
+            <div class="tile-image">
+              <img src="/Resources/packers/farm-packer-fp-one.jpg" alt="" />
+            </div>
+            <div class="tile-product-description">
+              <h4>Farm packer</h4>
+              <h3>FPOne</h3>
+            </div>
+          </a>
+          <a href="/html/products/packers/gpOne.html" class="tile">
+            <div class="tile-image">
+              <img src="/Resources/packers/grader-packer-gp-one.jpg" alt="" />
+            </div>
+            <div class="tile-product-description">
+              <h4>Grader packer "Re-packer"</h4>
+              <h3>GPOne</h3>
+            </div>
+          </a>
+        </section>
+        <h2>AUTOMATIC EGG GRADERS</h2>
+        <section class="graders">
+          <a href="/html/products/graders/compactaD101.html" class="tile">
+            <div class="tile-image">
+              <img src="/Resources/graders/grader_compactaD101.jpg" alt="" />
+            </div>
+            <div class="tile-product-description">
+              <h4>Grading by Electronic scales</h4>
+              <h3>Compacta D101</h3>
+            </div>
+          </a>
+          <a href="/html/products/graders/ovoselecta.html" class="tile">
+            <div class="tile-image">
+              <img src="/Resources/graders/grader_ovoslecta-6w.jpg" alt="" />
+            </div>
+            <div class="tile-product-description">
+              <h4>Grading by Electronic scales</h4>
+              <h3>Ovoselecta</h3>
+            </div>
+          </a>
+          <a href="/html/products/graders/viewmax.html" class="tile">
+            <div class="tile-image">
+              <img src="/Resources/graders/grader_viewmax-render.jpg" alt="" />
+            </div>
+            <div class="tile-product-description">
+              <h4>Grading by Vision</h4>
+              <h3>Viewmax</h3>
+            </div>
+          </a>
+        </section>
+      </main>
+      <footer>
+        <div class="content">
+          <span>REOVOTEC © 2020</span>
+          <ul class="links">
+            <li><a href="https://linkedin.com" class="link">Linkedin</a></li>
+            <li><a href="/html/products.html" class="link">Products</a></li>
+            <li><a href="/html/updates.html#events" class="link">Events</a></li>
+            <li>
+              <a href="http://intechllc.net/index.html" class="link"
+                >Partners</a
+              >
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <style>
+      main {
+        width: 100vw;
+      }
+      h2 {
+        margin: 4rem auto;
+        font-size: 2rem;
+        color: var(--primary-color);
+        border-bottom: 2px solid var(--secondary-color);
+        padding: 1rem;
+        text-align: center;
+        min-width: fit-content;
+        max-width: max-content;
+      }
+      .packers,
+      .graders {
+        display: grid;
+        place-content: center;
+        grid-template-columns: repeat(auto-fit, 27rem);
+        gap: 1rem;
+        max-width: 86rem;
+        margin: 0 auto 8rem;
+        padding: 0 0.5rem;
+      }
+      .tile {
+        display: flex;
+        flex-direction: column;
+        border: var(--primary-color) 2px solid;
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: white;
+      }
+      .tile:hover {
+        box-shadow: var(--box-shadow);
+      }
+      .tile-image {
+        margin: 1rem 0 0;
+        height: 16rem;
+      }
+      .tile-product-description {
+        background-color: var(--primary-color);
+        text-align: center;
+        padding: 0.4rem 0;
+      }
+      h3 {
+        margin-top: 0.8rem;
+        font-size: 1.5rem;
+      }
+      @media (max-width: 600px){
+        .packers,
+        .graders {
+        grid-template-columns: none;
+        }
+      }
+    </style>
+    <script></script>
+    <script src="/js/index.js"></script>
+  </body>
+</html>
