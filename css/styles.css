@@ -366,3 +366,55 @@ footer ul a {
     font-size: 11px;
   }
 }
+
+
+/* TILES & tile container */
+.product-title-header {
+  margin: 4rem auto;
+  font-size: 2rem;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  padding: 1rem;
+  text-align: center;
+  min-width: fit-content;
+  max-width: max-content;
+}
+.product-tile-container {
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(auto-fit, 27rem);
+  gap: 1rem;
+  max-width: 86rem;
+  margin: 0 auto 8rem;
+  padding: 0 0.5rem;
+}
+.product-tile {
+  display: flex;
+  flex-direction: column;
+  border: var(--primary-color) 2px solid;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+}
+.product-tile:hover {
+  box-shadow: var(--box-shadow);
+}
+.product-tile-image {
+  margin: 1rem 0 0;
+  height: 16rem;
+}
+.product-tile-description {
+  background-color: var(--primary-color);
+  text-align: center;
+  padding: 0.4rem 0;
+  max-height: 70px;
+}
+.product-tile-description h3 {
+  margin-top: 0.8rem;
+  font-size: 1.5rem;
+}
+@media (max-width: 600px) {
+  .product-tile-container {
+    grid-template-columns: none;
+  }
+}
