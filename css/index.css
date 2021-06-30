@@ -87,14 +87,10 @@ h1 {
 @media screen and (max-width: 800px) {
   .timeline-swiper {
     position: relative;
-    background-color: var(--primary-color);
   }
   .year-button {
-    background-color: rgba(0, 0, 0, 0.26);
-  }
-  .year-button:hover,
-  .active {
-    background-color: black;
+    padding: 1rem;
+    color: #000;
   }
 
   .vision-description h2 {
@@ -136,21 +132,41 @@ h1 {
 
 /* Who we are */
 
-.whoweare {
+#whoweare {
   display: grid;
   place-items: center;
 }
+
 .info-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5rem;
   place-items: center;
   text-align: left;
-  margin: 0rem 5%;
+  margin: 2rem 5%;
   padding:3rem 0 4rem; 
   max-width: 900px;
+  color: var(--primary-color);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.stage img {
-  max-width: 600px;
+.info-container img {
+  max-width: 500px;
+}
+
+@media screen and (max-width: 800px) {
+  .info-container {
+    gap: 2rem;
+    margin-top:1rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+  }
+  .info-description {
+    margin-top: 0;
+  }
+  .info-container:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+
 }
