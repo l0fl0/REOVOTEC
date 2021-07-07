@@ -36,7 +36,7 @@ ul {
 
 p {
   font-size: 0.9rem;
-  font-weight: 100;
+  font-weight: 400;
 }
 i {
   padding: 0 0.5rem;
@@ -387,6 +387,7 @@ footer ul a {
   max-width: 86rem;
   margin: 0 auto 8rem;
   padding: 0 0.5rem;
+  
 }
 .product-tile {
   display: flex;
@@ -395,6 +396,7 @@ footer ul a {
   border-radius: 10px;
   overflow: hidden;
   background-color: white;
+
 }
 .product-tile:hover {
   box-shadow: var(--box-shadow);
@@ -406,11 +408,10 @@ footer ul a {
 .product-tile-description {
   background-color: var(--primary-color);
   text-align: center;
-  padding: 0.4rem 0;
+  padding: 0.5rem 0;
   max-height: 70px;
 }
 .product-tile-description h3 {
-  margin-top: 0.8rem;
   font-size: 1.5rem;
 }
 @media (max-width: 600px) {
