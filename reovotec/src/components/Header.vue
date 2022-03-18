@@ -13,7 +13,7 @@ const routes = router.getRoutes();
 
 <template>
 	<header
-		class="flex items-center leading-tight h-30 p-4 shadow-md"
+		class="flex items-center leading-tight h-30 p-4 shadow-md transition-all duration-700"
 		:class="{ shadow_none: isMenu }"
 	>
 		<RouterLink to="/" @click.prevent="isMenu = false">
@@ -44,7 +44,6 @@ const routes = router.getRoutes();
 	<nav
 		class="text-center shadow-md md:hidden gentle-menu"
 		:class="{ 'gentle-menu--close': isMenu }"
-		v-if="isMenu"
 	>
 		<RouterLink
 			v-for="route in routes"
@@ -92,24 +91,13 @@ nav a:first-of-type {
 .gentle-menu {
 	overflow: hidden;
 	/* animation: gentle-menu 1s ease-in-out; */
-	transition: all 1s ease-in-out;
+	transition: all 0.8s ease-in-out;
 	height: 0;
-	opacity: 1;
+	opacity: 0;
 }
 
 .gentle-menu.gentle-menu--close {
-	opacity: 0;
+	opacity: 1;
 	height: 9rem;
-}
-
-@keyframes gentle-menu {
-	0% {
-		height: 0;
-		opacity: 0;
-	}
-	100% {
-		height: 9rem;
-		opacity: 1;
-	}
 }
 </style>
