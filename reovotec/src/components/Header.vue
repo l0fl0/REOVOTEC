@@ -1,42 +1,66 @@
 <script setup>
+import { reactive, ref } from "vue";
 import { RouterLink } from "vue-router";
+import router from "../router/index";
+import Hamburger from "./Hamburger.vue";
+// state
+const isMenu = ref(false);
+
+const routes = router.getRoutes();
+
+//Methods
 </script>
 
 <template>
-	<header class="flex items-center leading-tight h-30">
-		<RouterLink to="/">
+	<header
+		class="flex items-center leading-tight h-30 p-4 shadow-md"
+		:class="{ shadow_none: isMenu }"
+	>
+		<RouterLink to="/" @click.prevent="isMenu = false">
 			<img
 				alt="Reovotec Logo"
-				class="h-full w-40"
+				class="w-20 md:w-30"
 				src="@/assets/reovotec-logo-blue.svg"
 			/>
 		</RouterLink>
-		<div class="flex items-center md:hidden">
-			<button class="outline-none">
-				<svg
-					class="w-6 h-6 text-gray-500"
-					x-show="!showMenu"
-					fill="none"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-width="2"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-				>
-					<path d="M4 6h16M4 12h16M4 18h16"></path>
-				</svg>
-			</button>
+
+		<div class="md:hidden ml-auto mr-5" @click.prevent="isMenu = !isMenu">
+			<Hamburger :class="{ open: isMenu }" />
 		</div>
-		<nav class="hidden md:flex">
-			<RouterLink to="/">Home</RouterLink>
-			<RouterLink to="/products">Products</RouterLink>
-			<RouterLink to="/updates">Updates</RouterLink>
-			<RouterLink to="/contact">Contact</RouterLink>
+
+		<!-- Tablet/Desktop Nav -->
+		<nav class="hidden md:flex ml-8">
+			<RouterLink
+				v-for="route in routes"
+				:to="route.path"
+				@click.prevent="isMenu = false"
+			>
+				{{ route.name.capitalize() }}
+			</RouterLink>
 		</nav>
 	</header>
+
+	<!-- Mobile Nav -->
+	<nav
+		class="text-center shadow-md md:hidden gentle-menu"
+		:class="{ 'gentle-menu--close': isMenu }"
+		v-if="isMenu"
+	>
+		<RouterLink
+			v-for="route in routes"
+			:to="route.path"
+			@click.prevent="isMenu = false"
+		>
+			{{ route.name.capitalize() }}
+		</RouterLink>
+	</nav>
 </template>
 
 <style scoped>
+.shadow_none {
+	@apply shadow-none;
+}
+
 a {
 	text-decoration: none;
 	color: hsla(1, 0%, 37%, 1);
@@ -52,11 +76,12 @@ nav a.router-link-exact-active:hover {
 }
 
 nav a {
-	display: inline-block;
-	padding: 0 1rem;
+	display: block;
+	padding: 0.4rem 1rem;
 	border-left: 1px solid var(--color-border);
 }
-nav a:hover {
+nav a:hover,
+nav a:active {
 	background-color: hsla(211, 100%, 37%, 0.2);
 }
 
@@ -64,6 +89,27 @@ nav a:first-of-type {
 	border: 0;
 }
 
-@media (min-width: var(--breakpoint-tablet)) {
+.gentle-menu {
+	overflow: hidden;
+	/* animation: gentle-menu 1s ease-in-out; */
+	transition: all 1s ease-in-out;
+	height: 0;
+	opacity: 1;
+}
+
+.gentle-menu.gentle-menu--close {
+	opacity: 0;
+	height: 9rem;
+}
+
+@keyframes gentle-menu {
+	0% {
+		height: 0;
+		opacity: 0;
+	}
+	100% {
+		height: 9rem;
+		opacity: 1;
+	}
 }
 </style>

@@ -1,7 +1,5 @@
 <script setup></script>
 
-<template>
-	<h1>Updates</h1>
-</template>
+<template></template>
 
 <style></style>

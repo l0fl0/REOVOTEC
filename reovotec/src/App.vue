@@ -1,6 +1,7 @@
 <script setup>
 import { RouterView } from "vue-router";
 import Header from "./components/Header.vue";
+import "./utils/formatString";
 </script>
 
 <template>
@@ -12,8 +13,8 @@ import Header from "./components/Header.vue";
 @import "@/assets/base.css";
 
 #app {
-	max-width: 1280px;
-	padding: 1rem 0.5rem;
+	max-width: var(--breakpoint-desktop);
+	margin: 0 auto;
 	font-weight: normal;
 }
 </style>
