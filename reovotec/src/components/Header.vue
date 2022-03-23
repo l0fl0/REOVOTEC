@@ -7,15 +7,16 @@ import HeaderNav from "./HeaderNav.vue";
 const isMenu = ref(false);
 const headerEl = ref();
 const navHide = ref(false);
-// Variables fot hide/show navbar depending on scroll
+
+// Variables fot hide/show navbar depending on scroll pos/direction
 const didScroll = ref(false);
-const lastScrollTop = ref(0);
 const delta = 5;
-const navbarHeight = ref(0);
-let scrollCheck;
+let lastScrollTop = 0;
+let navbarHeight = 0;
+let scrollCheck; // setInterval function
 
 onMounted(() => {
-	navbarHeight.value = headerEl.value.scrollHeight;
+	navbarHeight = headerEl.value.scrollHeight;
 	window.onscroll = () => (didScroll.value = true);
 
 	// run hasScrolled() and reset didScroll status
@@ -30,19 +31,18 @@ onMounted(() => {
 const hasScrolled = () => {
 	let st = window.scrollY;
 
-	if (Math.abs(lastScrollTop.value - st) <= delta) return;
-
+	if (Math.abs(lastScrollTop - st) <= delta) return;
+	console.log(Math.abs(lastScrollTop - st) <= delta);
 	// If current position > last position AND scrolled past navbar...
-	if (st > lastScrollTop.value && st > navbarHeight.value) {
+	if (st > lastScrollTop && st > navbarHeight) {
 		// Scroll Down
 		navHide.value = true;
 	} else {
 		// Scroll Up
-		// If did not scroll past the document (possible on mac)...  if(st + $(window).height() < $(document).height()) {
 		navHide.value = false;
 	}
 
-	lastScrollTop.value = st;
+	lastScrollTop = st;
 };
 
 onUnmounted(() => {
@@ -60,7 +60,7 @@ onUnmounted(() => {
 				<img
 					alt="Reovotec Logo"
 					class="w-20 md:w-30"
-					src="@/assets/reovotec-logo-blue.svg"
+					src="../../reovotec-logo-blue.svg"
 				/>
 			</RouterLink>
 
@@ -88,7 +88,7 @@ header {
 	height: var(--navigation-height);
 	top: 0;
 	background: var(--color-background);
-	transition: top 0.5s ease-in-out;
+	transition: top 0.2s ease-in;
 }
 
 .nav-hide {
