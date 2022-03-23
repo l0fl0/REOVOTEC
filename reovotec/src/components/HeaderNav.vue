@@ -29,6 +29,9 @@ onMounted(() => {
 </template>
 
 <style scoped>
+nav {
+	background: var(--color-background);
+}
 a {
 	text-decoration: none;
 	color: hsla(1, 0%, 37%, 1);
@@ -58,6 +61,7 @@ nav a:first-of-type {
 }
 
 .gentle-menu {
+	margin-top: var(--navigation-height);
 	overflow: hidden;
 	transition: all 0.4s ease-in-out;
 	height: 0;

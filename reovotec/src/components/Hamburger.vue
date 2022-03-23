@@ -15,10 +15,9 @@
 	height: 30px;
 	cursor: pointer;
 	transition: all 0.5s ease-in-out;
-	border: 3px solid #fff;
 }
 .menu-btn__burger {
-	width: 30px;
+	width: 25px;
 	height: 3px;
 	background: var(--color-text);
 	border-radius: 5px;

@@ -15,6 +15,7 @@
 <style scoped>
 footer {
 	margin-top: auto;
+	padding-top: 3rem;
 	width: 100%;
 	color: var(--color-heading);
 	font-size: 0.7rem;

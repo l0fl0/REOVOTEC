@@ -7,7 +7,7 @@ import "./utils/formatString";
 
 <template>
 	<Header />
-	<RouterView />
+	<RouterView class="main-content" />
 	<Footer />
 </template>
 
@@ -22,5 +22,8 @@ import "./utils/formatString";
 	margin: 0 auto;
 	font-weight: normal;
 	min-height: 100vh;
+}
+.main-content {
+	margin-top: var(--navigation-height);
 }
 </style>

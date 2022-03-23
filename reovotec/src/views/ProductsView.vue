@@ -1,9 +1,22 @@
-<script setup>
-//
-</script>
+<script setup></script>
 
 <template>
-	<h1>Products</h1>
+	<div>
+		<img src="../assets/LandingPage/usa-flag.png" alt="" />
+		<img src="../assets/LandingPage/usa-flag.png" alt="" />
+		<img src="../assets/LandingPage/usa-flag.png" alt="" />
+		<img src="../assets/LandingPage/usa-flag.png" alt="" />
+		<img src="../assets/LandingPage/usa-flag.png" alt="" />
+		<img src="../assets/LandingPage/usa-flag.png" alt="" />
+		<img src="../assets/LandingPage/usa-flag.png" alt="" />
+		<img src="../assets/LandingPage/usa-flag.png" alt="" />
+	</div>
 </template>
 
-<style></style>
+<style scoped>
+div {
+	display: grid;
+	gap: 1rem;
+	background-color: black;
+}
+</style>
