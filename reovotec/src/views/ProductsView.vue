@@ -2,14 +2,14 @@
 
 <template>
 	<div>
-		<img src="../assets/LandingPage/usa-flag.png" alt="" />
-		<img src="../assets/LandingPage/usa-flag.png" alt="" />
-		<img src="../assets/LandingPage/usa-flag.png" alt="" />
-		<img src="../assets/LandingPage/usa-flag.png" alt="" />
-		<img src="../assets/LandingPage/usa-flag.png" alt="" />
-		<img src="../assets/LandingPage/usa-flag.png" alt="" />
-		<img src="../assets/LandingPage/usa-flag.png" alt="" />
-		<img src="../assets/LandingPage/usa-flag.png" alt="" />
+		<img src="../assets/images/LandingPage/usa-flag.png" alt="" />
+		<img src="../assets/images/LandingPage/usa-flag.png" alt="" />
+		<img src="../assets/images/LandingPage/usa-flag.png" alt="" />
+		<img src="../assets/images/LandingPage/usa-flag.png" alt="" />
+		<img src="../assets/images/LandingPage/usa-flag.png" alt="" />
+		<img src="../assets/images/LandingPage/usa-flag.png" alt="" />
+		<img src="../assets/images/LandingPage/usa-flag.png" alt="" />
+		<img src="../assets/images/LandingPage/usa-flag.png" alt="" />
 	</div>
 </template>
 
