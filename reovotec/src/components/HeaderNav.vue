@@ -61,8 +61,6 @@ nav a:first-of-type {
 }
 
 .gentle-menu {
-	margin-top: var(--navigation-height);
-	overflow: hidden;
 	transition: all 0.4s ease-in-out;
 	height: 0;
 	opacity: 0;

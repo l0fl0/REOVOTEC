@@ -29,6 +29,7 @@ onMounted(() => {
 });
 
 const hasScrolled = () => {
+	// https://medium.com/@mariusc23/hide-header-on-scroll-down-show-on-scroll-up-67bbaae9a78c
 	let st = window.scrollY;
 
 	if (Math.abs(lastScrollTop - st) <= delta) return;
@@ -53,7 +54,7 @@ onUnmounted(() => {
 <template>
 	<header ref="headerEl" :class="{ 'nav-hide': navHide }">
 		<section
-			class="flex items-center leading-tight h-30 p-4 shadow-md transition-all duration-700 fixed w-full"
+			class="flex items-center leading-tight h-30 p-4 shadow-md transition-all duration-700 w-full"
 			:class="{ shadow_none: isMenu }"
 		>
 			<RouterLink to="/" @click="isMenu = false">
@@ -85,6 +86,7 @@ onUnmounted(() => {
 header {
 	position: fixed;
 	width: 100%;
+	max-width: var(--breakpoint-desktop);
 	height: var(--navigation-height);
 	top: 0;
 	background: var(--color-background);
