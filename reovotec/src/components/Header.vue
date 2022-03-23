@@ -5,6 +5,7 @@ import Hamburger from "./Hamburger.vue";
 import HeaderNav from "./HeaderNav.vue";
 // state
 const isMenu = ref(false);
+const delayMenu = ref(false);
 const headerEl = ref();
 const navHide = ref(false);
 
@@ -28,6 +29,10 @@ onMounted(() => {
 	}, 250);
 });
 
+onUnmounted(() => {
+	clearInterval(scrollCheck);
+});
+
 const hasScrolled = () => {
 	// https://medium.com/@mariusc23/hide-header-on-scroll-down-show-on-scroll-up-67bbaae9a78c
 	let st = window.scrollY;
@@ -46,9 +51,21 @@ const hasScrolled = () => {
 	lastScrollTop = st;
 };
 
-onUnmounted(() => {
-	clearInterval(scrollCheck);
-});
+const toggleMenu = () => {
+	isMenu.value = !isMenu.value;
+
+	// for closing the menu with delay
+	if (!isMenu.value && delayMenu.value) {
+		setTimeout(() => {
+			delayMenu.value = !delayMenu.value;
+		}, 300);
+		return;
+	}
+	// default for showing the menu
+	setTimeout(() => {
+		delayMenu.value = !delayMenu.value;
+	}, 200);
+};
 </script>
 
 <template>
@@ -65,19 +82,21 @@ onUnmounted(() => {
 				/>
 			</RouterLink>
 
-			<div class="md:hidden ml-auto mr-5" @click="isMenu = !isMenu">
+			<div class="md:hidden ml-auto mr-5" @click="toggleMenu">
 				<Hamburger :class="{ open: isMenu }" />
 			</div>
 
 			<!-- Tablet/Desktop Nav -->
-			<HeaderNav v-model:menu="isMenu" class="hidden md:flex ml-8" />
+			<HeaderNav v-model:menu="isMenu" class="hidden ml-8 md:flex" />
 		</section>
 
 		<!-- Mobile Nav -->
 		<HeaderNav
+			v-if="isMenu ? isMenu : delayMenu"
 			v-model:menu="isMenu"
+			v-model:delay="delayMenu"
 			class="text-center shadow-md md:hidden gentle-menu"
-			:class="{ 'gentle-menu--close': isMenu }"
+			:class="{ 'gentle-menu--open': isMenu ? delayMenu : isMenu }"
 		/>
 	</header>
 </template>

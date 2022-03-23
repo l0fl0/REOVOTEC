@@ -1,22 +1,10 @@
-<script setup></script>
+<script setup>
+import products from "../products";
+console.log(products);
+</script>
 
 <template>
-	<div>
-		<img src="../assets/images/LandingPage/usa-flag.png" alt="" />
-		<img src="../assets/images/LandingPage/usa-flag.png" alt="" />
-		<img src="../assets/images/LandingPage/usa-flag.png" alt="" />
-		<img src="../assets/images/LandingPage/usa-flag.png" alt="" />
-		<img src="../assets/images/LandingPage/usa-flag.png" alt="" />
-		<img src="../assets/images/LandingPage/usa-flag.png" alt="" />
-		<img src="../assets/images/LandingPage/usa-flag.png" alt="" />
-		<img src="../assets/images/LandingPage/usa-flag.png" alt="" />
-	</div>
+	<main></main>
 </template>
 
-<style scoped>
-div {
-	display: grid;
-	gap: 1rem;
-	background-color: black;
-}
-</style>
+<style scoped></style>
