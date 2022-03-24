@@ -2,6 +2,7 @@
 import { onMounted, ref } from "vue";
 import { RouterLink } from "vue-router";
 import router from "../router/index";
+import products from "../products.json";
 
 const props = defineProps({
 	menu: Boolean,
@@ -25,13 +26,32 @@ onMounted(() => {
 <template>
 	<nav>
 		<template v-for="route in routes">
-			<nav class="navbar__products" v-if="route.path.startsWith('/products')">
+			<nav class="navbar__products" v-if="route.path.endsWith('/products')">
 				<h2>Products ⌄</h2>
-				<h3>Packers</h3>
-				<RouterLink :to="route.path"> Farm Packer One </RouterLink>
-				<RouterLink :to="route.path"> Grader Packer One </RouterLink>
-				<h3>Graders</h3>
+
+				<div>
+					<h3>Packers</h3>
+					<template v-for="product in products">
+						<RouterLink
+							:to="route.path"
+							v-if="product.productType === 'packer'"
+						>
+							{{ product.modelNameShort }}
+						</RouterLink>
+					</template>
+
+					<h3>Graders</h3>
+					<template v-for="product in products">
+						<RouterLink
+							:to="route.path"
+							v-if="product.productType === 'grader'"
+						>
+							{{ product.modelNameShort }}
+						</RouterLink>
+					</template>
+				</div>
 			</nav>
+
 			<RouterLink v-else :to="route.path" @click="closeMenu">
 				{{ route.name.capitalize() }}
 			</RouterLink>
