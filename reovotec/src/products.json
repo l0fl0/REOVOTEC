@@ -123,9 +123,9 @@
 	},
 	{
 		"productType": "grader",
-		"modelType": "",
+		"modelType": "6W",
 		"modelName": "",
-		"modelNameShort": "Ovoselecta 6W",
+		"modelNameShort": "Ovoselecta",
 		"eggsPerHour": 42000,
 		"casesPerHour": 0,
 		"numberOfSizes": 6,
@@ -143,9 +143,9 @@
 		"details": [],
 		"configurations": [
 			{
-				"modelType": "",
+				"modelType": "10W",
 				"modelName": "",
-				"modelNameShort": "Ovoselcta 10W",
+				"modelNameShort": "Ovoselcta",
 				"eggsPerHour": 70000,
 				"casesPerHour": 0,
 				"dimentions": [],
@@ -159,9 +159,9 @@
 				"images": []
 			},
 			{
-				"modelType": "",
+				"modelType": "10WX",
 				"modelName": "",
-				"modelNameShort": "Ovoselcta 10WX",
+				"modelNameShort": "Ovoselcta",
 				"eggsPerHour": 70000,
 				"casesPerHour": 0,
 				"dimentions": [],
@@ -175,9 +175,9 @@
 				"images": []
 			},
 			{
-				"modelType": "",
+				"modelType": "12W",
 				"modelName": "",
-				"modelNameShort": "Ovoselcta 12W",
+				"modelNameShort": "Ovoselcta",
 				"eggsPerHour": 90000,
 				"casesPerHour": 0,
 				"dimentions": [],
@@ -194,9 +194,9 @@
 	},
 	{
 		"productType": "grader",
-		"modelType": "",
+		"modelType": "6W",
 		"modelName": "",
-		"modelNameShort": "ViewMax 6W",
+		"modelNameShort": "ViewMax",
 		"eggsPerHour": 48000,
 		"casesPerHour": 0,
 		"numberOfSizes": 5,
@@ -214,9 +214,9 @@
 		"details": [],
 		"configurations": [
 			{
-				"modelType": "",
+				"modelType": "10W",
 				"modelName": "",
-				"modelNameShort": "ViewMax 10W",
+				"modelNameShort": "ViewMax",
 				"eggsPerHour": 80000,
 				"casesPerHour": 0,
 				"dimentions": [],
