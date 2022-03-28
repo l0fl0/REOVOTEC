@@ -2,9 +2,9 @@
 import { onMounted, ref } from "vue";
 import { RouterLink } from "vue-router";
 import router from "../router/index";
-import products from "../products.json";
+import ProductsNav from "./ProductsNav.vue";
 
-const disabled = ref(false);
+import products from "../products.json";
 
 const props = defineProps({
 	menu: Boolean,
@@ -13,6 +13,7 @@ const props = defineProps({
 
 const emit = defineEmits(["update:menu", "update:delay"]);
 
+const disabled = ref(false);
 const routes = ref(null);
 
 const closeMenu = () => {
@@ -28,36 +29,43 @@ onMounted(() => {
 <template>
 	<nav class="navbar">
 		<template v-for="route in routes">
+			<div v-if="route.path === '/products/:model'"></div>
+
 			<RouterLink
-				v-if="route.path !== '/products/:model'"
+				v-else-if="route.path !== '/products'"
 				:to="route.path"
 				@click="closeMenu"
 				class="navbar__link"
 			>
 				{{ route.name.capitalize() }}
 			</RouterLink>
-			<!--Todo: the products should be second on the list -->
-			<nav v-else class="navbar__products" @click="disabled = !disabled">
+
+			<nav
+				v-if="route.path === '/products'"
+				class="navbar__products"
+				@click="disabled = !disabled"
+			>
 				<h2>Products</h2>
 
-				<div v-if="disabled">
+				<div v-if="disabled" class="navbar__products-nav">
 					<h3>Packers</h3>
 					<template v-for="product in products">
 						<RouterLink
 							v-if="product.productType === 'packer'"
-							:to="route.path + '/' + product.modelNameShort"
-							class="navbar__link"
+							:to="route.path + '/' + product.modelNameShort.combineLower()"
+							class="navbar__link navbar__link--clean-border"
 						>
 							{{ product.modelNameShort }}
 						</RouterLink>
 					</template>
 
 					<h3>Graders</h3>
+
 					<template v-for="product in products">
 						<RouterLink
 							v-if="product.productType === 'grader'"
-							:to="route.path + '/' + product.modelNameShort"
-							class="navbar__link"
+							:to="route.path + '/' + product.modelNameShort.combineLower()"
+							class="navbar__link navbar__link--clean-border"
 						>
 							{{ product.modelNameShort }}
 						</RouterLink>
@@ -70,10 +78,10 @@ onMounted(() => {
 
 <style scoped>
 .navbar__products {
-	order: 2;
 	color: var(--color-heading);
 	background-color: var(--color-background);
 }
+
 .navbar__products h2 {
 	text-decoration: none;
 	color: var(--color-heading);
@@ -89,7 +97,15 @@ onMounted(() => {
 .navbar__products:active {
 	background-color: var(--color-background);
 }
-.navbar__products h3 {
+
+.navbar__products-nav {
+	border: 1px solid black;
+	position: absolute;
+	padding: 1rem;
+	background-color: var(--color-background);
+}
+
+.navbar__products-nav h3 {
 	color: hsla(1, 0%, 37%, 1);
 	font-weight: 500;
 	margin-top: 0.5rem;
@@ -120,6 +136,11 @@ onMounted(() => {
 }
 .navbar__link:first-of-type {
 	border: 0;
+}
+
+/* Modifiers */
+.navbar__link--clean-border {
+	border-left: none;
 }
 .gentle-menu {
 	transition: all 0.3s ease-in-out;
