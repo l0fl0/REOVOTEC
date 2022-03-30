@@ -45,7 +45,7 @@ onMounted(() => {
 			Products <i class="fa-solid fa-chevron-up"></i>
 		</h2>
 
-		<nav v-if="showProductsMenu" class="navbar__products-nav">
+		<nav v-if="showProductsMenu" class="navbar__products-nav md:shadow-lg">
 			<template v-for="(productType, key) in productTypes">
 				<div>
 					<h3 class="navbar__products-subtitle">
@@ -67,31 +67,15 @@ onMounted(() => {
 </template>
 
 <style scoped>
-@media (min-width: 768px) {
-	.navbar__products-nav {
-		margin: 0;
-		position: absolute;
-		border-top: none;
-		font-size: 0.9rem;
-		/* fixed width */
-		width: 10rem;
-	}
-
-	.navbar__products-subtitle {
-		margin: 1rem 1rem 0;
-	}
-}
-
 .navbar__products {
 	position: relative;
 }
 .navbar__products-title {
 	color: var(--color-heading);
 	background-color: var(--color-background);
-	text-decoration: none;
 	color: var(--color-heading);
+	text-decoration: none;
 	transition: 0.4s all ease-in-out;
-	display: block;
 	padding: 0.3rem 1rem;
 	border-left: 1px solid var(--color-border);
 	cursor: pointer;
@@ -125,5 +109,21 @@ onMounted(() => {
 .gentle-menu--open {
 	opacity: 1;
 	height: 8rem;
+}
+
+@media (min-width: 768px) {
+	.navbar__products-nav {
+		margin: 0;
+		position: absolute;
+		border-top: none;
+		font-size: 0.9rem;
+		box-shadow: var();
+		/* fixed width */
+		width: 10rem;
+	}
+
+	.navbar__products-subtitle {
+		margin: 1rem 1rem 0;
+	}
 }
 </style>

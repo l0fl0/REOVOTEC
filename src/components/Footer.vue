@@ -1,40 +1,50 @@
-<script setup></script>
-
 <template>
-	<footer>
-		<span> Copyright © {{ new Date().getFullYear() }} REOVOTEC LLC.</span>
+	<footer class="footer">
+		<h3 class="footer__copyright">
+			Copyright © {{ new Date().getFullYear() }} REOVOTEC LLC.
+		</h3>
 		<div class="footer__links">
-			<a href="https://www.linkedin.com/in/andres-moreno-096aa33a/">Linkedin</a>
-			<a href="">Products</a>
-			<a href="">Events</a>
-			<a href="">Partners</a>
+			<a
+				href="https://www.linkedin.com/in/andres-moreno-096aa33a/"
+				class="footer__link"
+				>Linkedin</a
+			>
+			<a href="" class="footer__link">Products</a>
+			<a href="" class="footer__link">Events</a>
+			<a href="" class="footer__link">Partners</a>
 		</div>
 	</footer>
 </template>
 
 <style scoped>
-footer {
+.footer {
 	margin-top: auto;
-	padding-top: 3rem;
 	width: 100%;
 	color: var(--color-heading);
-	font-size: 0.7rem;
+	font-size: 0.8rem;
 	display: flex;
 	flex-direction: column-reverse;
-	text-align: center;
+	align-items: center;
+	gap: 1rem;
+	padding: 1rem 0;
 }
 
-span {
+.footer__copyright {
 	font-size: 0.6rem;
-	padding: 1rem;
 }
 
 .footer__links {
 	display: flex;
 	gap: 1rem;
-	margin: 0 auto;
 }
-a:hover {
+.footer__link:hover {
 	color: var(--color-text);
+}
+
+@media (min-width: 768px) {
+	.footer {
+		flex-direction: row;
+		justify-content: center;
+	}
 }
 </style>
