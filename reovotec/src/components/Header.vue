@@ -72,7 +72,7 @@ const toggleMenu = () => {
 	<header ref="headerEl" :class="{ 'nav-hide': navHide }">
 		<section
 			class="flex items-center leading-tight h-30 p-4 shadow-md transition-all duration-700 w-full"
-			:class="{ shadow_none: isMenu }"
+			:class="{ 'shadow-none': isMenu }"
 		>
 			<RouterLink to="/" @click="isMenu = false">
 				<img
@@ -87,14 +87,13 @@ const toggleMenu = () => {
 			</div>
 
 			<!-- Tablet/Desktop Nav -->
-			<HeaderNav v-model:menu="isMenu" class="hidden ml-8 md:flex" />
+			<HeaderNav class="hidden ml-8 md:flex" />
 		</section>
 
 		<!-- Mobile Nav -->
 		<HeaderNav
 			v-if="isMenu ? isMenu : delayMenu"
-			v-model:menu="isMenu"
-			v-model:delay="delayMenu"
+			@toggle-menu="toggleMenu"
 			class="text-center shadow-md md:hidden gentle-menu"
 			:class="{ 'gentle-menu--open': isMenu ? delayMenu : isMenu }"
 		/>
@@ -115,7 +114,7 @@ header {
 .nav-hide {
 	top: calc(var(--navigation-height) * -1);
 }
-.shadow_none {
-	@apply shadow-none;
+.shadow-none {
+	box-shadow: none;
 }
 </style>

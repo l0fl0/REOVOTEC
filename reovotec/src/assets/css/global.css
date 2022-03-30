@@ -20,8 +20,10 @@
 	--reo-c-text-dark-1: var(--reo-c-white-soft);
 	--reo-c-text-dark-2: rgba(235, 235, 235, 0.64);
 
+	--section-gap: 160px;
+
 	/* Breakpoints */
-	--breakpoint-tablet: 720px;
+	--breakpoint-tablet: 768px;
 	--breakpoint-desktop: 1280px;
 
 	/* Navbar Height */
@@ -39,8 +41,6 @@
 
 	--color-heading: var(--reo-c-text-light-2);
 	--color-text: var(--reo-c-text-light-1);
-
-	--section-gap: 160px;
 }
 
 /* @media (prefers-color-scheme: dark) {
