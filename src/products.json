@@ -1,16 +1,8 @@
 [
 	{
 		"productType": "packer",
-		"modelType": "standard",
-		"modelName": "Farm Packer One Standard",
+		"modelName": "Farm Packer One",
 		"modelNameShort": "FP One",
-		"eggsPerHour": 36000,
-		"casesPerHour": 195,
-		"dimentions": [2.3, 2.91],
-		"lines": 6,
-		"ovoscopia": true,
-		"exits": [true, false],
-		"cartons": false,
 		"powerUnit": { "voltage": 240, "hertz": [50, 60], "phase": 1, "ampere": 5 },
 		"images": [],
 		"description": "Farm packer description. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, commodi nesciunt? Harum atque consequuntur laborum temporibus accusantium minima. Officia at amet libero cupiditate reprehenderit dignissimos.",
@@ -25,9 +17,22 @@
 		],
 		"configurations": [
 			{
-				"modelType": "two pakers with distribution table",
-				"modelName": "Farm Packer One with Distribution Table",
-				"modelNameShort": "FP One system",
+				"modelType": "Standard",
+				"modelName": "Farm Packer One Standard",
+				"modelNameShort": "FP One",
+				"eggsPerHour": 36000,
+				"casesPerHour": 195,
+				"dimentions": [2.3, 2.91],
+				"lines": 6,
+				"ovoscopia": true,
+				"exits": [true, false],
+				"cartons": false,
+				"images": []
+			},
+			{
+				"modelType": "Double packer with distribution table",
+				"modelName": "Farm Packer One System with Distribution Table",
+				"modelNameShort": "FP One System",
 				"eggsPerHour": 72000,
 				"casesPerHour": 390,
 				"dimentions": [4.97, 3.86],
@@ -41,12 +46,10 @@
 	},
 	{
 		"productType": "packer",
-		"modelType": "re-packer",
-		"modelName": "Grader Packer One \"Re-Packer\"",
+		"modelName": "Grader Packer One",
 		"modelNameShort": "GP One",
 		"eggsPerHour": 36000,
 		"casesPerHour": 195,
-		"dimentions": [0.34, 2.35],
 		"lines": 6,
 		"ovoscopia": true,
 		"exits": [true, true],
@@ -54,9 +57,23 @@
 		"cartones": true,
 		"powerUnit": { "voltage": 240, "hertz": [50, 60], "phase": 1, "ampere": 5 },
 		"images": [],
-		"description": "",
+		"description": "Grader packer description. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, commodi nesciunt? Harum atque consequuntur laborum temporibus accusantium minima. Officia at amet libero cupiditate reprehenderit dignissimos.",
 		"details": [],
 		"configurations": [
+			{
+				"modelType": "Re-packer",
+				"modelName": "Grader Packer One \"Re-packer\" ",
+				"modelNameShort": "GP One",
+				"eggsPerHour": 36000,
+				"casesPerHour": 195,
+				"dimentions": [0.34, 2.35],
+				"lines": [6],
+				"ovoscopia": true,
+				"exits": [true, true],
+				"curveForCartons": false,
+				"cartones": true,
+				"images": []
+			},
 			{
 				"modelType": "packer with candler",
 				"modelName": "Grader Packer One with Ovoscopia",
@@ -124,7 +141,7 @@
 	{
 		"productType": "grader",
 		"modelType": "6W",
-		"modelName": "",
+		"modelName": "Ovoselecta 6W",
 		"modelNameShort": "Ovoselecta",
 		"eggsPerHour": 42000,
 		"casesPerHour": 0,
@@ -144,7 +161,7 @@
 		"configurations": [
 			{
 				"modelType": "10W",
-				"modelName": "",
+				"modelName": "Ovoselecta 10W",
 				"modelNameShort": "Ovoselcta",
 				"eggsPerHour": 70000,
 				"casesPerHour": 0,
@@ -160,7 +177,7 @@
 			},
 			{
 				"modelType": "10WX",
-				"modelName": "",
+				"modelName": "Ovoselecta 10WX",
 				"modelNameShort": "Ovoselcta",
 				"eggsPerHour": 70000,
 				"casesPerHour": 0,
@@ -176,7 +193,7 @@
 			},
 			{
 				"modelType": "12W",
-				"modelName": "",
+				"modelName": "Ovoselecta 12W",
 				"modelNameShort": "Ovoselcta",
 				"eggsPerHour": 90000,
 				"casesPerHour": 0,
@@ -195,7 +212,7 @@
 	{
 		"productType": "grader",
 		"modelType": "6W",
-		"modelName": "",
+		"modelName": "ViewMax 6W",
 		"modelNameShort": "ViewMax",
 		"eggsPerHour": 48000,
 		"casesPerHour": 0,
@@ -215,7 +232,7 @@
 		"configurations": [
 			{
 				"modelType": "10W",
-				"modelName": "",
+				"modelName": "ViewMax 10W",
 				"modelNameShort": "ViewMax",
 				"eggsPerHour": 80000,
 				"casesPerHour": 0,
