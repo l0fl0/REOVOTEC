@@ -49,7 +49,7 @@ onMounted(() => {
 			<template v-for="(productType, key) in productTypes">
 				<div>
 					<h3 class="navbar__products-subtitle">
-						{{ key.capitalize() + "s" }}
+						Egg {{ key.capitalize() + "s" }}
 					</h3>
 
 					<RouterLink
