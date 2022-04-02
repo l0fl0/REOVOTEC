@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted, ref } from "vue";
 import { RouterLink } from "vue-router";
-import products from "../products.json";
+import reovotecData from "../products.json";
 
 const props = defineProps({
 	path: String,
@@ -14,6 +14,7 @@ let productTypes = ref({});
 
 onMounted(() => {
 	let filteredObject = {};
+	let products = reovotecData;
 	for (const product in products) {
 		if (!filteredObject[products[product].productType]) {
 			filteredObject[products[product].productType] = [];

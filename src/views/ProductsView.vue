@@ -1,24 +1,30 @@
 <script setup>
 import { onMounted, ref, watch } from "vue";
 import { useRoute } from "vue-router";
-import products from "../products.json";
+import reovotecData from "../products.json";
 
 const route = useRoute();
-const product = ref({});
-
+let product = ref({});
+const showConfigType = ref(true);
+let configuration = ref({});
 watch(
 	() => route.params.model,
 	() =>
-		(product.value = products.filter(
+		(product.value = reovotecData.filter(
 			(product) => product.modelNameShort.combineLower() === route.params.model
 		)[0])
 );
 
 onMounted(() => {
-	product.value = products.filter(
+	product.value = reovotecData.filter(
 		(product) => product.modelNameShort.combineLower() === route.params.model
 	)[0];
 });
+
+const setConfig = (config) => {
+	config = Object.fromEntries(Object.entries(config).slice(4));
+	configuration.value = config;
+};
 </script>
 
 <template>
@@ -33,9 +39,29 @@ onMounted(() => {
 		<section>
 			<h2 class="product__subtitle">Configurations</h2>
 
-			<template v-for="config in product.configurations">
-				<h3>{{ config.modelType }}</h3>
-			</template>
+			<div class="product__config-table">
+				<template v-for="config in product.configurations">
+					<h4 class="product__config-item" @click="() => setConfig(config)">
+						{{ config.modelType }}
+					</h4>
+				</template>
+				<template v-for="(option, key) in configuration">
+					<!-- <div>{{ showConfig(config) }}</div> -->
+					<div v-if="key == 'dimentions'" class="product__config-option">
+						<span>{{ key }}</span>
+						<span>{{ option[0] + "m " + "x " + option[1] + "m" }}</span>
+					</div>
+					<div v-else-if="key == 'exits'" class="product__config-option">
+						<span>{{ key }}</span>
+						<span>{{ option[0] + ", " + option[1] }}</span>
+					</div>
+
+					<div v-else class="product__config-option">
+						<span>{{ key }}</span>
+						<span>{{ option }}</span>
+					</div>
+				</template>
+			</div>
 		</section>
 	</main>
 </template>
@@ -54,5 +80,27 @@ onMounted(() => {
 .product__subtitle {
 	color: var(--color-heading);
 	font-size: 1.5rem;
+}
+
+.product__config-table {
+	text-align: center;
+}
+
+.product__config-item {
+	border: 1px solid var(--color-border);
+	cursor: pointer;
+}
+
+.product__config-option {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid black;
+	padding: 1rem 0 0;
+}
+
+@media (min-width: 768px) {
+	.product__config-table {
+		display: flex;
+	}
 }
 </style>

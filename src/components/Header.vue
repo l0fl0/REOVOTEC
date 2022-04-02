@@ -38,7 +38,6 @@ const hasScrolled = () => {
 	let st = window.scrollY;
 
 	if (Math.abs(lastScrollTop - st) <= delta) return;
-	console.log(Math.abs(lastScrollTop - st) <= delta);
 	// If current position > last position AND scrolled past navbar...
 	if (st > lastScrollTop && st > navbarHeight) {
 		// Scroll Down

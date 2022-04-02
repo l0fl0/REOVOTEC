@@ -1,9 +1,15 @@
 [
 	{
+		"id": 100,
 		"productType": "packer",
 		"modelName": "Farm Packer One",
 		"modelNameShort": "FP One",
-		"powerUnit": { "voltage": 240, "hertz": [50, 60], "phase": 1, "ampere": 5 },
+		"powerUnit": {
+			"voltage": 240,
+			"hertz": [50, 60],
+			"phase": 1,
+			"ampere": 5
+		},
 		"images": [],
 		"description": "Farm packer description. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, commodi nesciunt? Harum atque consequuntur laborum temporibus accusantium minima. Officia at amet libero cupiditate reprehenderit dignissimos.",
 		"details": [
@@ -17,6 +23,7 @@
 		],
 		"configurations": [
 			{
+				"id": 101,
 				"modelType": "Standard",
 				"modelName": "Farm Packer One Standard",
 				"modelNameShort": "FP One",
@@ -30,13 +37,14 @@
 				"images": []
 			},
 			{
-				"modelType": "Double packer with distribution table",
+				"id": 102,
+				"modelType": "Double Packer System",
 				"modelName": "Farm Packer One System with Distribution Table",
 				"modelNameShort": "FP One System",
 				"eggsPerHour": 72000,
 				"casesPerHour": 390,
 				"dimentions": [4.97, 3.86],
-				"lines": [6, 6],
+				"lines": 12,
 				"ovoscopia": true,
 				"exits": [true, false],
 				"cartons": false,
@@ -45,6 +53,7 @@
 		]
 	},
 	{
+		"id": 200,
 		"productType": "packer",
 		"modelName": "Grader Packer One",
 		"modelNameShort": "GP One",
@@ -55,19 +64,25 @@
 		"exits": [true, true],
 		"curveForCartons": true,
 		"cartones": true,
-		"powerUnit": { "voltage": 240, "hertz": [50, 60], "phase": 1, "ampere": 5 },
+		"powerUnit": {
+			"voltage": 240,
+			"hertz": [50, 60],
+			"phase": 1,
+			"ampere": 5
+		},
 		"images": [],
 		"description": "Grader packer description. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, commodi nesciunt? Harum atque consequuntur laborum temporibus accusantium minima. Officia at amet libero cupiditate reprehenderit dignissimos.",
 		"details": [],
 		"configurations": [
 			{
+				"id": 201,
 				"modelType": "Re-packer",
 				"modelName": "Grader Packer One \"Re-packer\" ",
 				"modelNameShort": "GP One",
 				"eggsPerHour": 36000,
 				"casesPerHour": 195,
 				"dimentions": [0.34, 2.35],
-				"lines": [6],
+				"lines": 6,
 				"ovoscopia": true,
 				"exits": [true, true],
 				"curveForCartons": false,
@@ -75,13 +90,14 @@
 				"images": []
 			},
 			{
+				"id": 202,
 				"modelType": "packer with candler",
 				"modelName": "Grader Packer One with Ovoscopia",
 				"modelNameShort": "GP One w/ Candler",
 				"eggsPerHour": 36000,
 				"casesPerHour": 195,
 				"dimentions": [2.16, 2.97],
-				"lines": [6],
+				"lines": 6,
 				"ovoscopia": true,
 				"exits": [true, true],
 				"curveForCartons": false,
@@ -89,13 +105,14 @@
 				"images": []
 			},
 			{
+				"id": 203,
 				"modelType": "Double packer",
 				"modelName": "Grader Packer One System",
 				"modelNameShort": "GP One System",
 				"eggsPerHour": 72000,
 				"casesPerHour": 390,
 				"dimentions": [],
-				"lines": [6, 6],
+				"lines": 12,
 				"ovoscopia": true,
 				"exits": [true, false],
 				"curveForCartons": true,
@@ -105,6 +122,7 @@
 		]
 	},
 	{
+		"id": 300,
 		"productType": "grader",
 		"modelType": "sorter compact electric",
 		"modelName": "compact electronic scale sorter",
@@ -139,6 +157,7 @@
 		]
 	},
 	{
+		"id": 400,
 		"productType": "grader",
 		"modelType": "6W",
 		"modelName": "Ovoselecta 6W",
@@ -160,6 +179,7 @@
 		"details": [],
 		"configurations": [
 			{
+				"id": 401,
 				"modelType": "10W",
 				"modelName": "Ovoselecta 10W",
 				"modelNameShort": "Ovoselcta",
@@ -176,6 +196,7 @@
 				"images": []
 			},
 			{
+				"id": 402,
 				"modelType": "10WX",
 				"modelName": "Ovoselecta 10WX",
 				"modelNameShort": "Ovoselcta",
@@ -192,6 +213,7 @@
 				"images": []
 			},
 			{
+				"id": 403,
 				"modelType": "12W",
 				"modelName": "Ovoselecta 12W",
 				"modelNameShort": "Ovoselcta",
@@ -210,6 +232,7 @@
 		]
 	},
 	{
+		"id": 500,
 		"productType": "grader",
 		"modelType": "6W",
 		"modelName": "ViewMax 6W",
@@ -231,6 +254,7 @@
 		"details": [],
 		"configurations": [
 			{
+				"id": 501,
 				"modelType": "10W",
 				"modelName": "ViewMax 10W",
 				"modelNameShort": "ViewMax",
