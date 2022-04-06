@@ -45,19 +45,24 @@ const setConfig = (config) => {
 						{{ config.modelType }}
 					</h4>
 				</template>
-				<template v-for="(option, key) in configuration">
-					<!-- <div>{{ showConfig(config) }}</div> -->
-					<div v-if="key == 'dimentions'" class="product__config-option">
-						<span>{{ key }}</span>
+				<template
+					v-for="(option, key) in configuration"
+					:key="configuration.id"
+				>
+					<div v-if="key == 'dimentions' && key[0] === undefined"></div>
+
+					<div v-else-if="key == 'dimentions'" class="product__config-option">
+						<span>{{ key.capitalize() }}</span>
 						<span>{{ option[0] + "m " + "x " + option[1] + "m" }}</span>
 					</div>
+
 					<div v-else-if="key == 'exits'" class="product__config-option">
-						<span>{{ key }}</span>
-						<span>{{ option[0] + ", " + option[1] }}</span>
+						<span>{{ key.capitalize() }}</span>
+						<p v-if="option[0]">90° <span v-if="option[1]">, 180°</span></p>
 					</div>
 
 					<div v-else class="product__config-option">
-						<span>{{ key }}</span>
+						<span>{{ key.capitalize() }}</span>
 						<span>{{ option }}</span>
 					</div>
 				</template>
